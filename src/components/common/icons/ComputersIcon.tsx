@@ -1,5 +1,5 @@
-import ComputerSmallSvg from "../../../assets/icon/24px/Computers.svg?react";
-import ComputerLargeSvg from "../../../assets/icon/48px/Computers.svg?react";
+import ComputerSmallSvg from "../../../assets/f-icon/24px/Computers.svg?react";
+import ComputerLargeSvg from "../../../assets/f-icon/48px/Computers.svg?react";
 
 interface ComputersIconProps {
   variant: "small" | "large";

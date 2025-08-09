@@ -1,5 +1,5 @@
-import CameraSmallSvg from "../../../assets/icon/24px/Cameras.svg?react";
-import CameraLargeSvg from "../../../assets/icon/48px/Cameras.svg?react";
+import CameraSmallSvg from "../../../assets/f-icon/24px/Cameras.svg?react";
+import CameraLargeSvg from "../../../assets/f-icon/48px/Cameras.svg?react";
 
 interface CamerasIconProps {
   variant: "small" | "large";

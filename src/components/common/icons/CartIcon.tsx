@@ -1,4 +1,4 @@
-import Cart from "../../../assets/icon/32px/Cart.svg?react";
+import Cart from "../../../assets/f-icon/32px/Cart.svg?react";
 
 interface CartIconProps {
   className?: string;

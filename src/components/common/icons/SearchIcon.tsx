@@ -1,4 +1,4 @@
-import Search from "../../../assets/icon/24px/Search.svg?react";
+import Search from "../../../assets/f-icon/32px/Search.svg?react";
 
 interface SearchIconProps {
   className?: string;

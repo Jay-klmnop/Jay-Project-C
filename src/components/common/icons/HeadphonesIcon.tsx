@@ -1,5 +1,5 @@
-import HeadphoneSmallSvg from "../../../assets/icon/24px/Headphones.svg?react";
-import HeadphoneLargeSvg from "../../../assets/icon/48px/Headphones.svg?react";
+import HeadphoneSmallSvg from "../../../assets/f-icon/24px/Headphones.svg?react";
+import HeadphoneLargeSvg from "../../../assets/f-icon/48px/Headphones.svg?react";
 
 interface HeadphonesIconProps {
   variant: "small" | "large";

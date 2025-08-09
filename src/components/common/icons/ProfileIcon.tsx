@@ -1,4 +1,4 @@
-import Profile from "../../../assets/icon/32px/User.svg?react";
+import Profile from "../../../assets/f-icon/32px/User.svg?react";
 
 interface ProfileIconProps {
   className?: string;

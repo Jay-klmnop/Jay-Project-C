@@ -1,4 +1,4 @@
-import Twitter from "../../../assets/icon/16px/Twitter.svg?react";
+import Twitter from "../../../assets/f-icon/16px/Twitter.svg?react";
 
 interface TwitterIconProps {
   className?: string;

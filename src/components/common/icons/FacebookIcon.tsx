@@ -1,4 +1,4 @@
-import Facebook from "../../../assets/icon/16px/Facebook.svg?react";
+import Facebook from "../../../assets/f-icon/16px/Facebook.svg?react";
 
 interface FacebookIconProps {
   className?: string;

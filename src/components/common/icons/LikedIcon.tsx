@@ -1,4 +1,4 @@
-import Liked from "../../../assets/icon/32px/Favorites.svg?react";
+import Liked from "../../../assets/f-icon/32px/Favorites.svg?react";
 
 interface LikedIconProps {
   className?: string;

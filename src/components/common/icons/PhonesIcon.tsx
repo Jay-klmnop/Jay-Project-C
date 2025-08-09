@@ -1,5 +1,5 @@
-import PhoneSmallSvg from "../../../assets/icon/24px/Phones.svg?react";
-import PhoneLargeSvg from "../../../assets/icon/48px/Phones.svg?react";
+import PhoneSmallSvg from "../../../assets/f-icon/24px/Phones.svg?react";
+import PhoneLargeSvg from "../../../assets/f-icon/48px/Phones.svg?react";
 
 interface PhonesIconProps {
   variant: "small" | "large";
