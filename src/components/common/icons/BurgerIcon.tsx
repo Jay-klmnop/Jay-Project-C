@@ -1,4 +1,4 @@
-import Burger from "../../../assets/f-icon/40px/Burger.svg?react";
+import Burger from "../../../assets/figmaIcon/40px/Burger.svg?react";
 
 interface BurgerIconProps {
   className?: string;
