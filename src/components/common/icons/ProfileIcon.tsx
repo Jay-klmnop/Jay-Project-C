@@ -1,4 +1,4 @@
-import Profile from "../../../assets/figmaIcon/32px/User.svg?react";
+import Profile from "../../../assets/header-user-actions/user.svg?react";
 
 interface ProfileIconProps {
   className?: string;

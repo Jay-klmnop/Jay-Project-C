@@ -1,5 +1,4 @@
-import SmartWatchSmallSvg from "../../../assets/figmaIcon/24px/SmartWatches.svg?react";
-import SmartWatchLargeSvg from "../../../assets/figmaIcon/48px/SmartWatches.svg?react";
+import SmartWatchSmallSvg from "../../../assets/header-nav-sub/smart-watches.svg?react";
 
 interface SmartWatchesIconProps {
   variant: "small" | "large";
@@ -18,13 +17,13 @@ export default function SmartWatchesIcon({
     );
   }
 
-  if (variant === "large") {
+  /**if (variant === "large") {
     return (
       <div>
         <SmartWatchLargeSvg className={`${className ?? ""}`} />
       </div>
     );
-  }
+  }*/
 
   return null;
 }

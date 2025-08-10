@@ -1,4 +1,4 @@
-import Instagram from "../../../assets/figmaIcon/16px/Instagram.svg?react";
+import Instagram from "../../../assets/footer-social-links/instagram.svg?react";
 
 interface InstagramIconProps {
   className?: string;

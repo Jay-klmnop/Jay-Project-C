@@ -1,4 +1,4 @@
-import Burger from "../../../assets/figmaIcon/40px/Burger.svg?react";
+import Burger from "../../../assets/header-mobile-burger/burger.svg?react";
 
 interface BurgerIconProps {
   className?: string;
@@ -6,7 +6,7 @@ interface BurgerIconProps {
 
 export default function BurgerIcon({ className }: BurgerIconProps) {
   return (
-    <button className={className}>
+    <button className={`ml-4 ${className ?? ""}`}>
       <Burger className={className} />
     </button>
   );

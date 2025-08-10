@@ -1,5 +1,4 @@
-import ComputerSmallSvg from "../../../assets/figmaIcon/24px/Computers.svg?react";
-import ComputerLargeSvg from "../../../assets/figmaIcon/48px/Computers.svg?react";
+import ComputerSmallSvg from "../../../assetS/header-nav-sub/computers.svg?react";
 
 interface ComputersIconProps {
   variant: "small" | "large";
@@ -18,13 +17,13 @@ export default function ComputersIcon({
     );
   }
 
-  if (variant === "large") {
+  /**if (variant === "large") {
     return (
       <div>
         <ComputerLargeSvg className={`${className ?? ""}`} />
       </div>
     );
-  }
+  }*/
 
   return null;
 }
