@@ -1,5 +1,4 @@
-import PhoneSmallSvg from "../../../assets/figmaIcon/24px/Phones.svg?react";
-import PhoneLargeSvg from "../../../assets/figmaIcon/48px/Phones.svg?react";
+import PhoneSmallSvg from "../../../assets/header-nav-sub/phones.svg?react";
 
 interface PhonesIconProps {
   variant: "small" | "large";
@@ -15,13 +14,13 @@ export default function PhonesIcon({ variant, className }: PhonesIconProps) {
     );
   }
 
-  if (variant === "large") {
+  /**if (variant === "large") {
     return (
       <div>
         <PhoneLargeSvg className={`${className ?? ""}`} />
       </div>
     );
-  }
+  }*/
 
   return null;
 }

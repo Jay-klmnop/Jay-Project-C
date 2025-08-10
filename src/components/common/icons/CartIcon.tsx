@@ -1,4 +1,4 @@
-import Cart from "../../../assets/figmaIcon/32px/Cart.svg?react";
+import Cart from "../../../assets/header-user-actions/cart.svg?react";
 
 interface CartIconProps {
   className?: string;

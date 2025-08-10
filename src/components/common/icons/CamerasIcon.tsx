@@ -1,5 +1,4 @@
-import CameraSmallSvg from "../../../assets/figmaIcon/24px/Cameras.svg?react";
-import CameraLargeSvg from "../../../assets/figmaIcon/48px/Cameras.svg?react";
+import CameraSmallSvg from "../../../assets/header-nav-sub/cameras.svg?react";
 
 interface CamerasIconProps {
   variant: "small" | "large";
@@ -15,13 +14,13 @@ export default function CamerasIcon({ variant, className }: CamerasIconProps) {
     );
   }
 
-  if (variant === "large") {
+  /**if (variant === "large") {
     return (
       <div>
         <CameraLargeSvg className={`${className ?? ""}`} />
       </div>
     );
-  }
+  }*/
 
   return null;
 }

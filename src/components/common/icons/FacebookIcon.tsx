@@ -1,4 +1,4 @@
-import Facebook from "../../../assets/figmaIcon/16px/Facebook.svg?react";
+import Facebook from "../../../assets/footer-social-links/facebook.svg?react";
 
 interface FacebookIconProps {
   className?: string;

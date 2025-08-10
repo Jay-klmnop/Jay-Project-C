@@ -1,4 +1,4 @@
-import Twitter from "../../../assets/figmaIcon/16px/Twitter.svg?react";
+import Twitter from "../../../assets/footer-social-links/twitter.svg?react";
 
 interface TwitterIconProps {
   className?: string;

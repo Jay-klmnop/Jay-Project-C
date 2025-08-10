@@ -1,4 +1,4 @@
-import TikTok from "../../../assets/figmaIcon/16px/TikTok.svg?react";
+import TikTok from "../../../assets/footer-social-links/tiktok.svg?react";
 
 interface TikTokIconProps {
   className?: string;

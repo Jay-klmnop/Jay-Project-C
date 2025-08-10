@@ -1,5 +1,4 @@
-import HeadphoneSmallSvg from "../../../assets/figmaIcon/24px/Headphones.svg?react";
-import HeadphoneLargeSvg from "../../../assets/figmaIcon/48px/Headphones.svg?react";
+import HeadphoneSmallSvg from "../../../assets/header-nav-sub/headphones.svg?react";
 
 interface HeadphonesIconProps {
   variant: "small" | "large";
@@ -18,13 +17,13 @@ export default function HeadphonesIcon({
     );
   }
 
-  if (variant === "large") {
+  /**if (variant === "large") {
     return (
       <div>
         <HeadphoneLargeSvg className={`${className ?? ""}`} />
       </div>
     );
-  }
+  }*/
 
   return null;
 }
