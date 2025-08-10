@@ -1,4 +1,4 @@
-import ComputerSmallSvg from "../../../assetS/header-nav-sub/computers.svg?react";
+import ComputerSmallSvg from "../../../assets/header-nav-sub/computers.svg?react";
 
 interface ComputersIconProps {
   variant: "small" | "large";
@@ -18,11 +18,13 @@ export default function ComputersIcon({
   }
 
   /**if (variant === "large") {
+  /**if (variant === "large") {
     return (
       <div>
         <ComputerLargeSvg className={`${className ?? ""}`} />
       </div>
     );
+  }*/
   }*/
 
   return null;
