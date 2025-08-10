@@ -1,5 +1,5 @@
-import GamingSmallSvg from "../../../assets/f-icon/24px/Gaming.svg?react";
-import GamingLargeSvg from "../../../assets/f-icon/48px/Gaming.svg?react";
+import GamingSmallSvg from "../../../assets/figmaIcon/24px/Gaming.svg?react";
+import GamingLargeSvg from "../../../assets/figmaIcon/48px/Gaming.svg?react";
 
 interface GamingIconProps {
   variant: "small" | "large";
