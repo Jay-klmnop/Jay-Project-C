@@ -14,7 +14,7 @@ export default function CamerasIcon({ variant, className }: CamerasIconProps) {
     );
   }
 
-  /**if (variant === "large") {
+  /*if (variant === "large") {
     return (
       <div>
         <CameraLargeSvg className={`${className ?? ""}`} />

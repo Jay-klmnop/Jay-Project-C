@@ -17,7 +17,7 @@ export default function SmartWatchesIcon({
     );
   }
 
-  /**if (variant === "large") {
+  /*if (variant === "large") {
     return (
       <div>
         <SmartWatchLargeSvg className={`${className ?? ""}`} />

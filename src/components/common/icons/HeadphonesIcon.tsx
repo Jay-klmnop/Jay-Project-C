@@ -17,7 +17,7 @@ export default function HeadphonesIcon({
     );
   }
 
-  /**if (variant === "large") {
+  /*if (variant === "large") {
     return (
       <div>
         <HeadphoneLargeSvg className={`${className ?? ""}`} />
