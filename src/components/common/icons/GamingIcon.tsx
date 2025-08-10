@@ -14,7 +14,7 @@ export default function GamingIcon({ variant, className }: GamingIconProps) {
     );
   }
 
-  /**if (variant === "large") {
+  /*if (variant === "large") {
     return (
       <div>
         <GamingLargeSvg className={`${className ?? ""}`} />

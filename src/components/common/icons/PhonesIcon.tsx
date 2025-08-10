@@ -14,7 +14,7 @@ export default function PhonesIcon({ variant, className }: PhonesIconProps) {
     );
   }
 
-  /**if (variant === "large") {
+  /*if (variant === "large") {
     return (
       <div>
         <PhoneLargeSvg className={`${className ?? ""}`} />

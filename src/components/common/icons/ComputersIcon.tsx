@@ -17,14 +17,12 @@ export default function ComputersIcon({
     );
   }
 
-  /**if (variant === "large") {
-  /**if (variant === "large") {
+  /*if (variant === "large") {
     return (
       <div>
         <ComputerLargeSvg className={`${className ?? ""}`} />
       </div>
     );
-  }*/
   }*/
 
   return null;
