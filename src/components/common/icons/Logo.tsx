@@ -1,5 +1,5 @@
-import LogoBlackSvg from "../../../assets/figmaLogo/Logo-b.svg?react";
-import LogoWhiteSvg from "../../../assets/figmaLogo/Logo-w.svg?react";
+import LogoBlackSvg from "../../../assets/logo/black.svg?react";
+import LogoWhiteSvg from "../../../assets/logo/white.svg?react";
 
 interface LogoProps {
   variant: "black" | "white";

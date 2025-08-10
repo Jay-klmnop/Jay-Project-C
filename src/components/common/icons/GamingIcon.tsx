@@ -1,5 +1,4 @@
-import GamingSmallSvg from "../../../assets/figmaIcon/24px/Gaming.svg?react";
-import GamingLargeSvg from "../../../assets/figmaIcon/48px/Gaming.svg?react";
+import GamingSmallSvg from "../../../assets/header-nav-sub/gaming.svg?react";
 
 interface GamingIconProps {
   variant: "small" | "large";
@@ -15,13 +14,13 @@ export default function GamingIcon({ variant, className }: GamingIconProps) {
     );
   }
 
-  if (variant === "large") {
+  /**if (variant === "large") {
     return (
       <div>
         <GamingLargeSvg className={`${className ?? ""}`} />
       </div>
     );
-  }
+  }**/
 
   return null;
 }
