@@ -26,24 +26,22 @@ export default function NavSub({ className }: NavSubProps) {
   ];
 
   return (
-    <>
-      <div
-        className={`w-full flex flex-row justify-around items-center px-28 text-white bg-zinc-900 divide-x divide-gray-400 ${className ?? ""}`}
-      >
-        {navItems.map(({ to, label, IconComponent }) => (
-          <InternalLink
-            key={to}
-            to={to}
-            className="
-            flex flex-row items-center justify-center gap-x-2 
-            w-full h-full px-4 py-2 opacity-70 hover:opacity-100 transition
+    <div
+      className={`w-full flex flex-row justify-around items-center px-28 text-white bg-zinc-900 divide-x divide-gray-400 ${className ?? ""}`}
+    >
+      {navItems.map(({ to, label, IconComponent }) => (
+        <InternalLink
+          key={to}
+          to={to}
+          className="
+          flex flex-row items-center justify-center gap-x-2 
+          w-full h-full px-4 py-2 opacity-70 hover:opacity-100 transition
           "
-          >
-            <IconComponent variant="small" />
-            <span className="text-sm"> {label}</span>
-          </InternalLink>
-        ))}
-      </div>
-    </>
+        >
+          <IconComponent variant="small" />
+          <span className="text-sm"> {label}</span>
+        </InternalLink>
+      ))}
+    </div>
   );
 }
