@@ -1,40 +1,47 @@
 <!--
-Thank you for your contribution!
-Please provide a clear and concise title for your PR.
-Example: feat: Add user login functionality
+Thank you for creating a pull request!
+Please ensure you have linked the related issue.
 -->
 
-### Related Issue
+## Related Issue
 
-<!-- Use the `Closes` keyword to link the issue that this PR addresses. -->
-<!-- Example: Closes #123 -->
+<!-- Link the issue that this PR resolves. Use keywords like `Resolves` or `Closes`. -->
+<!-- Example: Resolves #123 -->
 
-- Closes #
+- Resolves: #
 
-### Description
+---
+
+## Summary of Changes
 
 <!--
-Please provide a clear and concise summary of the changes.
-What was the problem and what is the solution?
+Provide a clear and concise summary of the changes.
+Describe the problem and the solution.
 -->
 
-### Key Changes
+---
 
-<!-- List the most important changes you made. -->
+## Screenshots or GIFs
 
--
--
--
+<!--
+If your changes include UI modifications, please add screenshots or GIFs.
+'Before' & 'After' comparisons are especially helpful for reviewers.
+-->
 
-### Screenshots or GIFs
+---
 
-<!-- If applicable, add screenshots or GIFs to help explain your changes. -->
+## Checklist
 
-### Checklist
-
-<!-- Go over all the following points, and put an `x` in all the boxes that apply. -->
-
+- [ ] My PR title follows the Conventional Commits format (ex: `feat: Add user login page`).
 - [ ] I have linked the corresponding issue.
 - [ ] I have removed unnecessary comments and code.
-- [ ] My commit messages are conventional.
-- [ ] I have written a clear and comprehensive description of my work.
+- [ ] I have tested my changes and everything works as expected.
+
+---
+
+## Additional Comments
+
+<!--
+Is there anything specific you would like the reviewer to focus on?
+Feel free to add any other context or notes about your work.
+-->
