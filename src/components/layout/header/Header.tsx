@@ -15,7 +15,7 @@ export default function Header() {
             <InternalLink to="/">
               <Logo variant="black" className="shrink-0 py" />
             </InternalLink>
-            <SearchInput className="w-full mr-15p hidden sm:block" />
+            <SearchInput containerClassName="w-full mr-15p hidden" />
           </div>
 
           <div className="flex items-center shrink-0 gap-16 lg:max-w-xl">
