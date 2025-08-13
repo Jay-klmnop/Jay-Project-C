@@ -11,6 +11,13 @@ export default {
         "15p": "15%",
         "20p": "20%",
       },
+      theme: {
+        screens: {
+          sm: "375px",
+          md: "768px",
+          lg: "1200px",
+        },
+      },
     },
   },
   plugins: [],
