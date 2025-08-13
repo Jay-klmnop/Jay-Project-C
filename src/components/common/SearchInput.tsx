@@ -1,20 +1,29 @@
+import { type InputHTMLAttributes } from "react";
+import clsx from "clsx";
 import SearchIcon from "./icons/SearchIcon";
+import Input from "./Input";
 
-interface SearchInputProps {
-  className?: string;
+interface SearchInputProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, "type" | "className"> {
+  containerClassName?: string;
+  inputClassName?: string;
 }
 
-export default function SearchInput({ className }: SearchInputProps) {
+export default function SearchInput({
+  containerClassName,
+  inputClassName,
+  ...props
+}: SearchInputProps) {
   return (
-    <div className={`flex ${className ?? ""}`}>
-      <div className="flex relative items-center min-w-40 max-w-screen-sm">
-        <SearchIcon className="absolute left-3 top-2 pointer-events-none shrink-0" />
-        <input
-          type="search"
-          placeholder="Search"
-          className="w-full rounded-md placeholder:text-neutral-400 bg-neutral-100 text-neutral-900 border-0 py-3 pl-10 pr-4 focus:outline-none"
-        />
-      </div>
+    <div className={clsx("relative flex items-center", containerClassName)}>
+      <SearchIcon className="absolute left-3 top-3 pointer-events-none shrink-0" />
+      <Input
+        placeholder="Search"
+        {...props}
+        type="search"
+        variant="search"
+        className={inputClassName}
+      />
     </div>
   );
 }
