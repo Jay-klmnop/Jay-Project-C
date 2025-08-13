@@ -11,18 +11,15 @@ import CartPage from "./pages/CartPage";
 import ProfilePage from "./pages/ProfilePage";
 import PhonesPage from "./pages/PhonesPage";
 import ComputersPage from "./pages/ComputersPage";
-import SmartWatchesPage from "./pages/SmartWatches";
+import SmartWatchesPage from "./pages/SmartWatchesPage";
 import CameraPage from "./pages/CamerasPage";
 import HeadphonesPage from "./pages/HeadphonesPage";
 import GamingPage from "./pages/GamingPage";
 
 function App() {
-  const AppLayout = () => {
-    return <Layout />;
-  };
   return (
     <Routes>
-      <Route element={<AppLayout />}>
+      <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
