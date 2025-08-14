@@ -1,11 +1,12 @@
 import InternalLink from "../../common/link/InternalLink";
-
-import PhonesIcon from "../../common/icons/PhonesIcon";
-import ComputersIcon from "../../common/icons/ComputersIcon";
-import SmartWatchesIcon from "../../common/icons/SmartWatchesIcon";
-import CamerasIcon from "../../common/icons/CamerasIcon";
-import HeadphonesIcon from "../../common/icons/HeadphonesIcon";
-import GamingIcon from "../../common/icons/GamingIcon";
+import {
+  CameraIcon,
+  DesktopIcon,
+  DeviceMobileIcon,
+  GameControllerIcon,
+  HeadphonesIcon,
+  WatchIcon,
+} from "@phosphor-icons/react";
 
 interface NavSubProps {
   className?: string;
@@ -13,16 +14,16 @@ interface NavSubProps {
 
 export default function NavSub({ className }: NavSubProps) {
   const navItems = [
-    { to: "/phones", label: "Phones", IconComponent: PhonesIcon },
-    { to: "/computers", label: "Computers", IconComponent: ComputersIcon },
+    { to: "/phones", label: "Phones", IconComponent: DeviceMobileIcon },
+    { to: "/computers", label: "Computers", IconComponent: DesktopIcon },
     {
       to: "/smartwatches",
       label: "Smart Watches",
-      IconComponent: SmartWatchesIcon,
+      IconComponent: WatchIcon,
     },
-    { to: "/cameras", label: "Cameras", IconComponent: CamerasIcon },
+    { to: "/cameras", label: "Cameras", IconComponent: CameraIcon },
     { to: "/headphones", label: "Headphones", IconComponent: HeadphonesIcon },
-    { to: "/gaming", label: "Gaming", IconComponent: GamingIcon },
+    { to: "/gaming", label: "Gaming", IconComponent: GameControllerIcon },
   ];
 
   return (
@@ -38,7 +39,7 @@ export default function NavSub({ className }: NavSubProps) {
           w-full h-full px-4 py-2 opacity-70 hover:opacity-100 transition
           "
         >
-          <IconComponent variant="small" />
+          <IconComponent size={24} />
           <span className="text-sm"> {label}</span>
         </InternalLink>
       ))}

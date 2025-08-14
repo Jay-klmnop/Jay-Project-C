@@ -1,7 +1,9 @@
-import FacebookIcon from "../../common/icons/FacebookIcon";
-import InstagramIcon from "../../common/icons/InstagramIcon";
-import TikTokIcon from "../../common/icons/TikTokIcon";
-import TwitterIcon from "../../common/icons/TwitterIcon";
+import {
+  FacebookLogoIcon,
+  InstagramLogoIcon,
+  TiktokLogoIcon,
+  TwitterLogoIcon,
+} from "@phosphor-icons/react";
 import ExternalLink from "../../common/link/ExternalLink";
 
 interface SocialLinksProps {
@@ -13,12 +15,21 @@ export default function SocialLinks({ className }: SocialLinksProps) {
     <div
       className={`flex flex-row gap-4 items-center justify-center mt-6 lg:items-start lg:mt-10 ${className ?? ""}`}
     >
-      <ExternalLink href="https://www.twitter.com/" icon={<TwitterIcon />} />
-      <ExternalLink href="https://www.facebook.com/" icon={<FacebookIcon />} />
-      <ExternalLink href="https://www.tiktok.com/" icon={<TikTokIcon />} />
+      <ExternalLink
+        href="https://www.twitter.com/"
+        icon={<TwitterLogoIcon size={24} color="#ffffff" />}
+      />
+      <ExternalLink
+        href="https://www.facebook.com/"
+        icon={<FacebookLogoIcon size={24} color="#ffffff" />}
+      />
+      <ExternalLink
+        href="https://www.tiktok.com/"
+        icon={<TiktokLogoIcon size={24} color="#ffffff" />}
+      />
       <ExternalLink
         href="https://www.instagram.com/"
-        icon={<InstagramIcon />}
+        icon={<InstagramLogoIcon size={24} color="#ffffff" />}
       />
     </div>
   );

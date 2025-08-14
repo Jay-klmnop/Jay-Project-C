@@ -1,7 +1,7 @@
 import { type InputHTMLAttributes } from "react";
 import clsx from "clsx";
-import SearchIcon from "./icons/SearchIcon";
 import Input from "./Input";
+import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 
 interface SearchInputProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, "type" | "className"> {
@@ -16,7 +16,11 @@ export default function SearchInput({
 }: SearchInputProps) {
   return (
     <div className={clsx("relative flex items-center", containerClassName)}>
-      <SearchIcon className="absolute left-3 top-3 pointer-events-none shrink-0" />
+      <MagnifyingGlassIcon
+        size={24}
+        color="#989898"
+        className="absolute left-3 top-3 pointer-events-none shrink-0"
+      />
       <Input
         placeholder="Search"
         {...props}
