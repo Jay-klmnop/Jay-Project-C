@@ -8,10 +8,10 @@ export default function FooterServices() {
     `Payment`,
   ];
   return (
-    <div className="w-52 flex flex-col items-center mb-4 lg:items-start lg:m-0">
-      <h1 className="font-semibold text-base/loose">Services</h1>
+    <div className='mb-4 flex w-52 flex-col items-center lg:m-0 lg:items-start'>
+      <h1 className='text-base/loose font-semibold'>Services</h1>
       {serviceItems.map((item) => (
-        <p key={item} className="font-extralight text-sm/loose">
+        <p key={item} className='text-sm/loose font-extralight'>
           {item}
         </p>
       ))}

@@ -1,14 +1,14 @@
-name: "🐛 Bug Report"
-description: "Create a report to help us improve."
-title: "fix: "
-labels: ["bug"]
+name: '🐛 Bug Report'
+description: 'Create a report to help us improve.'
+title: 'fix: '
+labels: ['bug']
 
 body:
   - type: textarea
     id: bug-description
     attributes:
-      label: "Describe the Bug"
-      description: "A clear and concise description of what the bug is. What happened? What did you see?"
+      label: 'Describe the Bug'
+      description: 'A clear and concise description of what the bug is. What happened? What did you see?'
       placeholder: "ex: When I click the 'Add to Cart' button, the page crashes."
     validations:
       required: true
@@ -16,8 +16,8 @@ body:
   - type: textarea
     id: steps-to-reproduce
     attributes:
-      label: "Steps to Reproduce"
-      description: "Please provide detailed steps to reproduce the behavior."
+      label: 'Steps to Reproduce'
+      description: 'Please provide detailed steps to reproduce the behavior.'
       placeholder: |
         1. Go to the 'Product Detail' page.
         2. Click on the 'Add to Cart' button.
@@ -29,25 +29,25 @@ body:
   - type: textarea
     id: expected-behavior
     attributes:
-      label: "Expected Behavior"
-      description: "A clear and concise description of what you expected to happen."
-      placeholder: "ex: The item should be added to the cart, and a success notification should appear."
+      label: 'Expected Behavior'
+      description: 'A clear and concise description of what you expected to happen.'
+      placeholder: 'ex: The item should be added to the cart, and a success notification should appear.'
     validations:
       required: true
 
   - type: textarea
     id: screenshots
     attributes:
-      label: "Screenshots"
-      description: "If applicable, add screenshots to help explain your problem. You can drag and drop images here."
+      label: 'Screenshots'
+      description: 'If applicable, add screenshots to help explain your problem. You can drag and drop images here.'
     validations:
       required: false
 
   - type: dropdown
     id: os
     attributes:
-      label: "Operating System"
-      description: "What operating system are you using?"
+      label: 'Operating System'
+      description: 'What operating system are you using?'
       multiple: true
       options:
         - Windows 11
@@ -61,8 +61,8 @@ body:
   - type: dropdown
     id: browser
     attributes:
-      label: "Browser"
-      description: "What browser are you using?"
+      label: 'Browser'
+      description: 'What browser are you using?'
       multiple: true
       options:
         - Chrome
