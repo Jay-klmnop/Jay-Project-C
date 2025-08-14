@@ -4,5 +4,5 @@ import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [react(), svgr()],
-  base: "/Jay-C-Cloning-13/",
+  base: "/Jay-Project-C/",
 });

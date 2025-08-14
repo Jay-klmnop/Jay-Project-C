@@ -6,7 +6,7 @@ import App from "./App.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter basename="/Jay-C-Cloning-13/">
+    <BrowserRouter basename="/Jay-Project-C/">
       <App />
     </BrowserRouter>
   </StrictMode>,

@@ -1,8 +1,8 @@
 {
-  "name": "jay-c-cloning-v3",
+  "name": "jay-project-c",
   "private": true,
-  "version": "0.1.0",
-  "homepage": "https://jay-klmnop.github.io/Jay-C-Cloning-13",
+  "version": "0.2.0",
+  "homepage": "https://jay-klmnop.github.io/Jay-Project-C",
   "type": "module",
   "scripts": {
     "dev": "vite",
