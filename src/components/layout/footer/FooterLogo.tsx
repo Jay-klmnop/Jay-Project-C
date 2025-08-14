@@ -1,4 +1,4 @@
-import Logo from "../../common/icons/Logo";
+import Logo from "../../common/Logo";
 
 interface FooterLogoProps {
   className?: string;

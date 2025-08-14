@@ -1,7 +1,9 @@
 import InternalLink from "../../common/link/InternalLink";
-import LikedIcon from "../../common/icons/LikedIcon";
-import CartIcon from "../../common/icons/CartIcon";
-import ProfileIcon from "../../common/icons/ProfileIcon";
+import {
+  ListHeartIcon,
+  ShoppingBagIcon,
+  UserSquareIcon,
+} from "@phosphor-icons/react";
 
 interface UserActionsProps {
   className?: string;
@@ -11,13 +13,13 @@ export default function UserActions({ className }: UserActionsProps) {
   return (
     <div className={`flex flex-row gap-4 ${className ?? ""}`}>
       <InternalLink to="/liked">
-        <LikedIcon />
+        <ListHeartIcon size={32} />
       </InternalLink>
       <InternalLink to="/cart">
-        <CartIcon />
+        <ShoppingBagIcon size={32} />
       </InternalLink>
       <InternalLink to="/profile">
-        <ProfileIcon />
+        <UserSquareIcon size={32} />
       </InternalLink>
     </div>
   );
