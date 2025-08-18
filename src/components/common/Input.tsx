@@ -19,5 +19,5 @@ export interface InputProps
     VariantProps<typeof inputVariants> {}
 
 export default function Input({ className, variant, type = 'text', ...props }: InputProps) {
-  return <Input type={type} className={inputVariants({ variant, className })} {...props} />;
+  return <input type={type} className={inputVariants({ variant, className })} {...props} />;
 }
