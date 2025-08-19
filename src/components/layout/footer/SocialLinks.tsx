@@ -4,7 +4,7 @@ import {
   TiktokLogoIcon,
   TwitterLogoIcon,
 } from '@phosphor-icons/react';
-import ExternalLink from '../../common/link/ExternalLink';
+import ExternalLink from '@/components/common/link/ExternalLink';
 
 interface SocialLinksProps {
   className?: string;

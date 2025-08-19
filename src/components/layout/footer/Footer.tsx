@@ -1,5 +1,5 @@
-import FooterContent from './FooterContent';
-import SocialLinks from './SocialLinks';
+import FooterContent from '@/components/layout/footer/FooterContent';
+import SocialLinks from '@/components/layout/footer/SocialLinks';
 
 export default function Footer() {
   return (
