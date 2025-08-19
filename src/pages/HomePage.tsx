@@ -1,4 +1,4 @@
-import HeroBanner from '@/components/layout/banner/HeroBanner';
+import { HeroBanner } from '@/components/layout';
 
 export default function HomePage() {
   return <HeroBanner />;

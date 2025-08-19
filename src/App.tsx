@@ -1,20 +1,22 @@
 import { Routes, Route } from 'react-router-dom';
-import Layout from '@/components/layout/Layout';
+import { Layout } from '@/components/layout';
 import '@/index.css';
 
-import HomePage from '@/pages/HomePage';
-import AboutPage from '@/pages/AboutPage';
-import ContactPage from '@/pages/ContactPage';
-import BlogPage from '@/pages/BlogPage';
-import LikedPage from '@/pages/LikedPage';
-import CartPage from '@/pages/CartPage';
-import ProfilePage from '@/pages/ProfilePage';
-import PhonesPage from '@/pages/PhonesPage';
-import ComputersPage from '@/pages/ComputersPage';
-import SmartWatchesPage from '@/pages/SmartWatchesPage';
-import CameraPage from '@/pages/CamerasPage';
-import HeadphonesPage from '@/pages/HeadphonesPage';
-import GamingPage from '@/pages/GamingPage';
+import {
+  HomePage,
+  AboutPage,
+  ContactPage,
+  BlogPage,
+  LikedPage,
+  CartPage,
+  ProfilePage,
+  PhonesPage,
+  ComputersPage,
+  SmartWatchesPage,
+  CamerasPage,
+  HeadphonesPage,
+  GamingPage,
+} from '@/pages';
 
 function App() {
   return (
@@ -30,7 +32,7 @@ function App() {
         <Route path='/phones' element={<PhonesPage />} />
         <Route path='/computers' element={<ComputersPage />} />
         <Route path='/smartwatches' element={<SmartWatchesPage />} />
-        <Route path='/cameras' element={<CameraPage />} />
+        <Route path='/cameras' element={<CamerasPage />} />
         <Route path='/headphones' element={<HeadphonesPage />} />
         <Route path='/gaming' element={<GamingPage />} />
       </Route>

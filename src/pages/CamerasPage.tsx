@@ -1,4 +1,4 @@
-export default function CameraPage() {
+export default function CamerasPage() {
   return (
     <div className='p-20 text-center'>
       <h1 className='text-4xl font-bold'>Camera</h1>
