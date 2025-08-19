@@ -1,36 +1,16 @@
 import { InternalLink } from '@/components/common';
-import {
-  CameraIcon,
-  DesktopIcon,
-  DeviceMobileIcon,
-  GameControllerIcon,
-  HeadphonesIcon,
-  WatchIcon,
-} from '@phosphor-icons/react';
+import { SUB_NAV_ITEMS } from '@/constants/navigation';
 
 interface NavSubProps {
   className?: string;
 }
 
 export default function NavSub({ className }: NavSubProps) {
-  const navItems = [
-    { to: '/phones', label: 'Phones', IconComponent: DeviceMobileIcon },
-    { to: '/computers', label: 'Computers', IconComponent: DesktopIcon },
-    {
-      to: '/smartwatches',
-      label: 'Smart Watches',
-      IconComponent: WatchIcon,
-    },
-    { to: '/cameras', label: 'Cameras', IconComponent: CameraIcon },
-    { to: '/headphones', label: 'Headphones', IconComponent: HeadphonesIcon },
-    { to: '/gaming', label: 'Gaming', IconComponent: GameControllerIcon },
-  ];
-
   return (
-    <div
+    <nav
       className={`flex w-full flex-row items-center justify-around divide-x divide-gray-400 bg-zinc-900 px-28 text-white ${className ?? ''}`}
     >
-      {navItems.map(({ to, label, IconComponent }) => (
+      {SUB_NAV_ITEMS.map(({ to, label, IconComponent }) => (
         <InternalLink
           key={to}
           to={to}
@@ -40,6 +20,6 @@ export default function NavSub({ className }: NavSubProps) {
           <span className='text-sm'> {label}</span>
         </InternalLink>
       ))}
-    </div>
+    </nav>
   );
 }

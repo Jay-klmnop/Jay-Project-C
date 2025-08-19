@@ -1,24 +1,25 @@
+import { useLocation } from 'react-router-dom';
 import { InternalLink } from '@/components/common';
+import { MAIN_NAV_LINKS } from '@/constants/navigation';
 
 interface NavMainProps {
   className?: string;
 }
 
 export default function NavMain({ className }: NavMainProps) {
+  const location = useLocation();
+
   return (
-    <div className={`flex flex-row gap-10 ${className ?? ''}`}>
-      <InternalLink to='/' className='text-black'>
-        Home
-      </InternalLink>
-      <InternalLink to='/about' className='text-gray-400'>
-        About
-      </InternalLink>
-      <InternalLink to='/contact' className='text-gray-400'>
-        Contact Us
-      </InternalLink>
-      <InternalLink to='/blog' className='text-gray-400'>
-        Blog
-      </InternalLink>
-    </div>
+    <nav className={`flex flex-row items-center gap-10 ${className ?? ''}`}>
+      {MAIN_NAV_LINKS.map(({ to, label }) => (
+        <InternalLink
+          key={label}
+          to={to}
+          className={location.pathname === to ? 'text-black' : 'text-gray-400'}
+        >
+          {label}
+        </InternalLink>
+      ))}
+    </nav>
   );
 }
