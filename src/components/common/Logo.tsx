@@ -1,6 +1,6 @@
-import LogoBlackSvg from '../../assets/Logo-bw.svg?react';
-import LogoWhiteSvg from '../../assets/Logo-wb.svg?react';
-import LogoBlankSvg from '../../assets/Logo-outline.svg?react';
+import LogoBlackSvg from '@/assets/Logo-bw.svg?react';
+import LogoWhiteSvg from '@/assets/Logo-wb.svg?react';
+import LogoBlankSvg from '@/assets/Logo-outline.svg?react';
 
 interface LogoProps {
   variant: 'black' | 'white' | 'blank';

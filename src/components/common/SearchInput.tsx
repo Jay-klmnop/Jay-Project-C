@@ -1,6 +1,6 @@
 import { type InputHTMLAttributes } from 'react';
 import clsx from 'clsx';
-import Input from './Input';
+import Input from '@/components/common/Input';
 import { MagnifyingGlassIcon } from '@phosphor-icons/react';
 
 interface SearchInputProps

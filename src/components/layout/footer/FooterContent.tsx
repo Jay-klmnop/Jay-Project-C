@@ -1,6 +1,6 @@
-import FooterAssistance from './FooterAssistance';
-import FooterLogo from './FooterLogo';
-import FooterServices from './FooterServices';
+import FooterAssistance from '@/components/layout/footer/FooterAssistance';
+import FooterLogo from '@/components/layout/footer/FooterLogo';
+import FooterServices from '@/components/layout/footer/FooterServices';
 
 interface FooterContentProps {
   className?: string;

@@ -1,20 +1,20 @@
 import { Routes, Route } from 'react-router-dom';
-import Layout from './components/layout/Layout';
-import './index.css';
+import Layout from '@/components/layout/Layout';
+import '@/index.css';
 
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
-import BlogPage from './pages/BlogPage';
-import LikedPage from './pages/LikedPage';
-import CartPage from './pages/CartPage';
-import ProfilePage from './pages/ProfilePage';
-import PhonesPage from './pages/PhonesPage';
-import ComputersPage from './pages/ComputersPage';
-import SmartWatchesPage from './pages/SmartWatchesPage';
-import CameraPage from './pages/CamerasPage';
-import HeadphonesPage from './pages/HeadphonesPage';
-import GamingPage from './pages/GamingPage';
+import HomePage from '@/pages/HomePage';
+import AboutPage from '@/pages/AboutPage';
+import ContactPage from '@/pages/ContactPage';
+import BlogPage from '@/pages/BlogPage';
+import LikedPage from '@/pages/LikedPage';
+import CartPage from '@/pages/CartPage';
+import ProfilePage from '@/pages/ProfilePage';
+import PhonesPage from '@/pages/PhonesPage';
+import ComputersPage from '@/pages/ComputersPage';
+import SmartWatchesPage from '@/pages/SmartWatchesPage';
+import CameraPage from '@/pages/CamerasPage';
+import HeadphonesPage from '@/pages/HeadphonesPage';
+import GamingPage from '@/pages/GamingPage';
 
 function App() {
   return (
