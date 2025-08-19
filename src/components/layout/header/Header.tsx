@@ -1,9 +1,5 @@
-import Logo from '@/components/common/Logo';
-import SearchInput from '@/components/common/SearchInput';
-import NavMain from '@/components/layout/header/NavMain';
-import UserActions from '@/components/layout/header/UserActions';
-import InternalLink from '@/components/common/link/InternalLink';
-import NavSub from '@/components/layout/header/NavSub';
+import { InternalLink, Logo, SearchInput } from '@/components/common';
+import { NavMain, NavSub, UserActions } from '@/components/layout/header';
 import { ListIcon } from '@phosphor-icons/react';
 
 export default function Header() {

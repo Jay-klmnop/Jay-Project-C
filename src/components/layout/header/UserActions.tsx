@@ -1,4 +1,4 @@
-import InternalLink from '@/components/common/link/InternalLink';
+import { InternalLink } from '@/components/common';
 import { ListHeartIcon, ShoppingBagIcon, UserSquareIcon } from '@phosphor-icons/react';
 
 interface UserActionsProps {
