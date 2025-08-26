@@ -8,7 +8,7 @@ export const MAIN_NAV_LINKS = [
 ];
 
 export const SUB_NAV_ITEMS = [
-  { to: '/t-shirts', label: 'T-Shirts' },
+  { to: '/t-shirts', label: 'T-shirts' },
   { to: '/sweatshirts', label: 'Sweatshirts' },
   { to: '/hoodies', label: 'Hoodies' },
   { to: '/jackets', label: 'Jackets' },

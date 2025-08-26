@@ -1,6 +1,22 @@
+export interface ProductVariant {
+  sku: string;
+  color: string;
+  size: string;
+  stock: number;
+  images: {
+    thumbnail: string;
+    large: string;
+  };
+}
 export interface ProductType {
-  id: React.ReactNode | string;
+  id: string;
   name: string;
+  category: string;
   price: number;
-  img: string;
+  tags: string[];
+  options: {
+    colors: string[];
+    sizes: string[];
+  };
+  variants: ProductVariant[];
 }
