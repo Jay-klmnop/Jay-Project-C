@@ -14,8 +14,8 @@ export default function ProductCard({ product, variant, addToCart }: ProductCard
   const imageUrl = getImageUrl(variant.images.thumbnail);
 
   return (
-    <div className='flex flex-col items-center rounded-lg bg-white p-4 text-center shadow-md transition-transform duration-200 ease-in-out hover:-translate-y-1'>
-      <img src={imageUrl} alt={product.name} className='h-[150px] w-full rounded-md object-cover' />
+    <div className='flex min-h-[320px] flex-col items-center rounded-lg bg-white p-4 text-center shadow-md transition-transform duration-200 ease-in-out hover:-translate-y-1'>
+      <img src={imageUrl} alt={product.name} className='h-full w-full rounded-md object-cover' />
       <h3 className='my-2 text-base font-semibold'>{product.name}</h3>
       <p className='font-bold text-black'>₩{product.price.toLocaleString()}</p>
       <Button onClick={addToCart} variant='filled-dark' shape='rounded' size='small'>
