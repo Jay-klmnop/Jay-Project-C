@@ -9,7 +9,7 @@ export default {
         lg: '1200px',
       },
       fontFamily: {
-        sans: ['Noto Sans', 'sans-serif'],
+        sans: ['Pretendard Variable', 'Noto Sans', 'sans-serif'],
       },
       margin: {
         '10p': '10%',
