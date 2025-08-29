@@ -5,6 +5,7 @@
       "name": "Ocean Original Fit T-shirt No. 01",
       "category": "T-shirts",
       "price": 17000,
+      "discountPrice": 15300,
       "tags": ["ocean", "original-fit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -98,6 +99,7 @@
       "name": "Ocean Original Fit T-shirt No. 02",
       "category": "T-shirts",
       "price": 17000,
+      "discountPrice": 15300,
       "tags": ["ocean", "original-fit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -191,6 +193,7 @@
       "name": "Ocean Original Fit T-shirt No. 03",
       "category": "T-shirts",
       "price": 17000,
+      "discountPrice": 15300,
       "tags": ["ocean", "original-fit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -284,6 +287,7 @@
       "name": "Ocean Original Fit T-shirt No. 04",
       "category": "T-shirts",
       "price": 17000,
+      "discountPrice": 15300,
       "tags": ["ocean", "original-fit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -377,6 +381,7 @@
       "name": "Ocean Original Fit T-shirt No. 05",
       "category": "T-shirts",
       "price": 17000,
+      "discountPrice": 15300,
       "tags": ["ocean", "original-fit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -470,6 +475,7 @@
       "name": "Forest Overfit T-shirt No. 01",
       "category": "T-shirts",
       "price": 18000,
+      "discountPrice": 0,
       "tags": ["forest", "overfit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -563,6 +569,7 @@
       "name": "Forest Overfit T-shirt No. 02",
       "category": "T-shirts",
       "price": 18000,
+      "discountPrice": 0,
       "tags": ["forest", "overfit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -656,6 +663,7 @@
       "name": "Forest Overfit T-shirt No. 03",
       "category": "T-shirts",
       "price": 18000,
+      "discountPrice": 0,
       "tags": ["forest", "overfit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -749,6 +757,7 @@
       "name": "Forest Overfit T-shirt No. 04",
       "category": "T-shirts",
       "price": 18000,
+      "discountPrice": 0,
       "tags": ["forest", "overfit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -842,7 +851,8 @@
       "name": "Forest Overfit T-shirt No. 05",
       "category": "T-shirts",
       "price": 18000,
-      "tags": ["forest", "overfit", "graphic-tee"],
+      "discountPrice": 0,
+      "tags": ["forest", "overfit", "graphic-tee", "featured"],
       "options": {
         "colors": ["Black", "White"],
         "sizes": ["S", "M", "L", "XL"]
@@ -935,7 +945,8 @@
       "name": "Cloud Unisex Sweatshirt No. 01",
       "category": "Sweatshirts",
       "price": 21900,
-      "tags": ["cloud", "unisex", "crewneck-sweatshirt"],
+      "discountPrice": 0,
+      "tags": ["cloud", "unisex", "crewneck-sweatshirt", "featured"],
       "options": {
         "colors": ["Black", "White"],
         "sizes": ["S", "M", "L", "XL"]
@@ -1028,6 +1039,7 @@
       "name": "Cloud Unisex Sweatshirt No. 02",
       "category": "Sweatshirts",
       "price": 21900,
+      "discountPrice": 0,
       "tags": ["cloud", "unisex", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1121,6 +1133,7 @@
       "name": "Cloud Unisex Sweatshirt No. 03",
       "category": "Sweatshirts",
       "price": 21900,
+      "discountPrice": 0,
       "tags": ["cloud", "unisex", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1214,6 +1227,7 @@
       "name": "Cloud Unisex Sweatshirt No. 04",
       "category": "Sweatshirts",
       "price": 21900,
+      "discountPrice": 0,
       "tags": ["cloud", "unisex", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1307,6 +1321,7 @@
       "name": "Cloud Unisex Sweatshirt No. 05",
       "category": "Sweatshirts",
       "price": 21900,
+      "discountPrice": 0,
       "tags": ["cloud", "unisex", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1400,6 +1415,7 @@
       "name": "Monochrome Overfit Sweatshirt No. 01",
       "category": "Sweatshirts",
       "price": 22200,
+      "discountPrice": 0,
       "tags": ["monochrome", "overfit", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1493,7 +1509,8 @@
       "name": "Monochrome Overfit Sweatshirt No. 02",
       "category": "Sweatshirts",
       "price": 22200,
-      "tags": ["monochrome", "overfit", "crewneck-sweatshirt"],
+      "discountPrice": 0,
+      "tags": ["monochrome", "overfit", "crewneck-sweatshirt", "featured"],
       "options": {
         "colors": ["Black", "White"],
         "sizes": ["S", "M", "L", "XL"]
@@ -1586,7 +1603,8 @@
       "name": "Monochrome Overfit Sweatshirt No. 03",
       "category": "Sweatshirts",
       "price": 22200,
-      "tags": ["monochrome", "overfit", "crewneck-sweatshirt"],
+      "discountPrice": 0,
+      "tags": ["monochrome", "overfit", "crewneck-sweatshirt", "featured"],
       "options": {
         "colors": ["Black", "White"],
         "sizes": ["S", "M", "L", "XL"]
@@ -1679,6 +1697,7 @@
       "name": "Monochrome Overfit Sweatshirt No. 04",
       "category": "Sweatshirts",
       "price": 22200,
+      "discountPrice": 0,
       "tags": ["monochrome", "overfit", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1772,6 +1791,7 @@
       "name": "Monochrome Overfit Sweatshirt No. 05",
       "category": "Sweatshirts",
       "price": 22200,
+      "discountPrice": 0,
       "tags": ["monochrome", "overfit", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1865,7 +1885,8 @@
       "name": "Vertical Graphic Basic Hoodie No. 01",
       "category": "Hoodies",
       "price": 26900,
-      "tags": ["vertical", "basic-fit", "graphic"],
+      "discountPrice": 0,
+      "tags": ["vertical", "basic-fit", "graphic", "featured"],
       "options": {
         "colors": ["Black", "White"],
         "sizes": ["S", "M", "L", "XL"]
@@ -1958,6 +1979,7 @@
       "name": "Vertical Graphic Basic Hoodie No. 02",
       "category": "Hoodies",
       "price": 26900,
+      "discountPrice": 0,
       "tags": ["vertical", "basic-fit", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2051,6 +2073,7 @@
       "name": "Vertical Graphic Basic Hoodie No. 03",
       "category": "Hoodies",
       "price": 26900,
+      "discountPrice": 0,
       "tags": ["vertical", "basic-fit", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2144,6 +2167,7 @@
       "name": "Vertical Graphic Basic Hoodie No. 04",
       "category": "Hoodies",
       "price": 26900,
+      "discountPrice": 0,
       "tags": ["vertical", "basic-fit", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2237,6 +2261,7 @@
       "name": "Vertical Graphic Basic Hoodie No. 05",
       "category": "Hoodies",
       "price": 26900,
+      "discountPrice": 0,
       "tags": ["vertical", "basic-fit", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2330,7 +2355,8 @@
       "name": "Street sign Graphic Hoodie No. 01",
       "category": "Hoodies",
       "price": 30900,
-      "tags": ["Street sign", "light", "graphic"],
+      "discountPrice": 0,
+      "tags": ["Street sign", "light", "graphic", "featured"],
       "options": {
         "colors": ["Black", "White"],
         "sizes": ["S", "M", "L", "XL"]
@@ -2423,6 +2449,7 @@
       "name": "Street sign Graphic Hoodie No. 02",
       "category": "Hoodies",
       "price": 30900,
+      "discountPrice": 0,
       "tags": ["Street sign", "light", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2516,6 +2543,7 @@
       "name": "Street sign Graphic Hoodie No. 03",
       "category": "Hoodies",
       "price": 30900,
+      "discountPrice": 0,
       "tags": ["Street sign", "light", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2609,7 +2637,8 @@
       "name": "Street sign Graphic Hoodie No. 04",
       "category": "Hoodies",
       "price": 30900,
-      "tags": ["Street sign", "light", "graphic"],
+      "discountPrice": 0,
+      "tags": ["Street sign", "light", "graphic", "featured"],
       "options": {
         "colors": ["Black", "White"],
         "sizes": ["S", "M", "L", "XL"]
@@ -2702,6 +2731,7 @@
       "name": "Street sign Graphic Hoodie No. 05",
       "category": "Hoodies",
       "price": 30900,
+      "discountPrice": 0,
       "tags": ["street-sign", "light", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2792,10 +2822,11 @@
     },
     {
       "id": "C0031",
-      "name": "The C:ODE Varsity Jacket",
+      "name": "The C:ODE Windbreaker",
       "category": "Outwear",
-      "price": 53000,
-      "tags": ["autumn", "baseball", "jacket"],
+      "price": 25300,
+      "discountPrice": 0,
+      "tags": ["simple", "light", "jacket", "featured"],
       "options": {
         "colors": ["Black", "White"],
         "sizes": ["S", "M", "L", "XL"]
@@ -2885,10 +2916,11 @@
     },
     {
       "id": "C0032",
-      "name": "The C:ODE Windbreaker",
+      "name": "The C:ODE Varsity Jacket",
       "category": "Outwear",
-      "price": 25300,
-      "tags": ["simple", "light", "jacket"],
+      "price": 53000,
+      "discountPrice": 0,
+      "tags": ["autumn", "baseball", "jacket"],
       "options": {
         "colors": ["Black", "White"],
         "sizes": ["S", "M", "L", "XL"]

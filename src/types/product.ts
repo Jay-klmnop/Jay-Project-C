@@ -13,6 +13,7 @@ export interface ProductType {
   name: string;
   category: string;
   price: number;
+  discountPrice: number;
   tags: string[];
   options: {
     colors: string[];
