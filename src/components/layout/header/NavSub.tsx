@@ -7,16 +7,14 @@ interface NavSubProps {
 
 export default function NavSub({ className }: NavSubProps) {
   return (
-    <nav
-      className={`flex w-full flex-row items-center justify-around divide-x divide-gray-400 bg-zinc-900 px-28 text-white ${className ?? ''}`}
-    >
+    <nav className={`flex h-6 w-full flex-row items-center justify-around px-4 ${className ?? ''}`}>
       {SUB_NAV_ITEMS.map(({ to, label }) => (
         <InternalLink
           key={to}
           to={to}
-          className='flex h-full w-full flex-row items-center justify-center gap-x-2 px-4 py-2 opacity-70 transition hover:opacity-100'
+          className='flex h-full w-full flex-row flex-nowrap items-center justify-center gap-x-2 px-2 py-2 transition'
         >
-          <span className='text-sm'> {label}</span>
+          <span className='whitespace-nowrap'> {label}</span>
         </InternalLink>
       ))}
     </nav>

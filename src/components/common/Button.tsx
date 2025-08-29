@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import type { ButtonHTMLAttributes } from 'react';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center font-semibold transition-colors focus:outline-none',
+  'inline-flex items-center justify-center text-xs font-semibold transition-colors focus:outline-none',
   {
     variants: {
       variant: {
@@ -15,8 +15,8 @@ const buttonVariants = cva(
         rounded: 'rounded-lg',
       },
       size: {
-        big: 'px-8 py-3 text-base',
-        small: 'px-4 py-2 text-sm',
+        big: 'px-8 py-3 text-sm lg:text-base',
+        small: 'px-4 py-2 text-xs lg:text-sm',
       },
     },
     defaultVariants: {

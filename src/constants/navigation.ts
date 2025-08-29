@@ -1,21 +1,19 @@
-import { ListHeartIcon, ShoppingBagIcon, UserSquareIcon } from '@phosphor-icons/react';
-
 export const MAIN_NAV_LINKS = [
-  { to: '/', label: 'Home' },
-  { to: '/products', label: 'Products' },
-  { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact Us' },
+  { to: '/', label: 'home' },
+  { to: '/about', label: 'about' },
+  { to: '/contact', label: 'contact' },
 ];
 
 export const SUB_NAV_ITEMS = [
-  { to: '/t-shirts', label: 'T-shirts' },
-  { to: '/sweatshirts', label: 'Sweatshirts' },
-  { to: '/hoodies', label: 'Hoodies' },
-  { to: '/jackets', label: 'Jackets' },
+  { to: '/products', label: 'all' },
+  { to: '/t-shirts', label: 't-shirts' },
+  { to: '/sweatshirts', label: 'sweatshirts' },
+  { to: '/hoodies', label: 'hoodies' },
+  { to: '/outwear', label: 'outwear' },
 ];
 
 export const USER_ACTIONS_LINKS = [
-  { to: '/liked', IconComponent: ListHeartIcon },
-  { to: '/cart', IconComponent: ShoppingBagIcon },
-  { to: '/profile', IconComponent: UserSquareIcon },
+  { to: '/liked', label: 'liked' },
+  { to: '/cart', label: 'cart' },
+  { to: '/profile', label: 'profile' },
 ];
