@@ -1,12 +1,8 @@
 import ProductCard from './ProductCard';
 import { useFetch } from '@/hooks/useFetch';
-import type { ProductType, ProductVariant } from '@/types/product';
+import type { ProductType } from '@/types';
 
-interface ProductListProps {
-  addToCart: (product: ProductType, selectedVariant: ProductVariant) => void;
-}
-
-export default function ProductList({ addToCart }: ProductListProps) {
+export default function ProductList() {
   const API_URL = `http://localhost:3001/products`;
 
   const { data: products, loading, error } = useFetch<ProductType[]>(API_URL);
@@ -27,13 +23,7 @@ export default function ProductList({ addToCart }: ProductListProps) {
 
         if (!representativeVariant) return null;
 
-        return (
-          <ProductCard
-            key={product.id}
-            product={product}
-            addToCart={() => addToCart(product, representativeVariant)}
-          />
-        );
+        return <ProductCard key={product.id} product={product} />;
       })}
     </div>
   );

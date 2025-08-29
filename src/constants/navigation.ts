@@ -13,7 +13,7 @@ export const SUB_NAV_ITEMS = [
 ];
 
 export const USER_ACTIONS_LINKS = [
-  { to: '/liked', label: 'liked' },
-  { to: '/cart', label: 'cart' },
-  { to: '/profile', label: 'profile' },
+  { type: 'link', to: '/liked', label: 'liked' },
+  { type: 'action', action: 'toggleCart', label: 'cart' },
+  { type: 'link', to: '/profile', label: 'profile' },
 ];
