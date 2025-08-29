@@ -1,7 +1,7 @@
-import promoImage2 from '@/assets/banner/banner2.webp';
-import promoImage3 from '@/assets/banner/banner3.webp';
-import promoImage4 from '@/assets/banner/banner4.webp';
-import promoImage5 from '@/assets/banner/banner5.webp';
+import promoImage2 from '@/assets/banner/banner_2.webp';
+import promoImage3 from '@/assets/banner/banner_3.webp';
+import promoImage4 from '@/assets/banner/banner_4.webp';
+import promoImage5 from '@/assets/banner/banner_5.webp';
 
 export interface PromoItemType {
   id: number;

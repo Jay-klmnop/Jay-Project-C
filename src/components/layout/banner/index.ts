@@ -1,8 +1,3 @@
 export { HeroBanner } from './HeroBanner';
 export { PromoBanner } from './PromoBanner';
-export {
-  LargePromoCard,
-  MediumPromoCard,
-  SmallPromoCardLeft,
-  SmallPromoCardRight,
-} from './PromoCards';
+export { LargePromoCard, MediumPromoCard, SmallPromoCardL, SmallPromoCardR } from './PromoCards';

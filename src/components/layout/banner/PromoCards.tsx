@@ -32,7 +32,7 @@ export function MediumPromoCard({ item }: PromoCardProps) {
   );
 }
 
-export function SmallPromoCardLeft({ item }: PromoCardProps) {
+export function SmallPromoCardL({ item }: PromoCardProps) {
   return (
     <div
       className='relative flex h-full min-h-80 w-full overflow-hidden bg-gray-300 bg-cover text-xs duration-1000 md:col-span-1 md:grid lg:text-sm'
@@ -46,7 +46,7 @@ export function SmallPromoCardLeft({ item }: PromoCardProps) {
   );
 }
 
-export function SmallPromoCardRight({ item }: PromoCardProps) {
+export function SmallPromoCardR({ item }: PromoCardProps) {
   return (
     <div
       className='relative flex h-full min-h-80 w-full overflow-hidden bg-gray-300 bg-cover text-xs duration-1000 md:col-span-1 md:grid lg:text-sm'

@@ -1,5 +1,5 @@
 import { HeroBanner } from '@/components/layout';
-import { PromoBanner } from '@/components/layout/banner';
+import { PromoBanner } from '@/components/layout';
 
 export default function HomePage() {
   return (
