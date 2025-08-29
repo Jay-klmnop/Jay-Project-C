@@ -8,9 +8,9 @@ interface UserActionsProps {
 export default function UserActions({ className }: UserActionsProps) {
   return (
     <div className={`flex flex-row items-center gap-4 ${className ?? ''}`}>
-      {USER_ACTIONS_LINKS.map(({ to, IconComponent }) => (
+      {USER_ACTIONS_LINKS.map(({ to, label }) => (
         <InternalLink key={to} to={to}>
-          <IconComponent size={32} />
+          {label}
         </InternalLink>
       ))}
     </div>

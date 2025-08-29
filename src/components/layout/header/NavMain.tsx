@@ -10,12 +10,12 @@ export default function NavMain({ className }: NavMainProps) {
   const location = useLocation();
 
   return (
-    <nav className={`flex flex-row items-center gap-10 ${className ?? ''}`}>
+    <nav className={`flex flex-row items-center gap-6 ${className ?? ''}`}>
       {MAIN_NAV_LINKS.map(({ to, label }) => (
         <InternalLink
           key={label}
           to={to}
-          className={location.pathname === to ? 'text-black' : 'text-gray-400'}
+          className={location.pathname === to ? 'text-black' : 'text-neutral-800'}
         >
           {label}
         </InternalLink>
