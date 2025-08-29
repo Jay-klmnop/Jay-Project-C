@@ -1,4 +1,4 @@
-import { PROMO_ITEMS } from '@/constants/promotions';
+import { PROMO_ITEMS } from '@/constants';
 import { LargePromoCard, MediumPromoCard, SmallPromoCardR, SmallPromoCardL } from './PromoCards';
 
 export function PromoBanner() {
