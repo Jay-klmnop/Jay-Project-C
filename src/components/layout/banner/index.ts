@@ -1,1 +1,8 @@
-export { default as HeroBanner } from './HeroBanner';
+export { HeroBanner } from './HeroBanner';
+export { PromoBanner } from './PromoBanner';
+export {
+  LargePromoCard,
+  MediumPromoCard,
+  SmallPromoCardLeft,
+  SmallPromoCardRight,
+} from './PromoCards';
