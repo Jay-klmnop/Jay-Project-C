@@ -14,6 +14,7 @@ export interface ProductType {
   category: string;
   price: number;
   discountPrice: number;
+  calculatedPrice: number;
   tags: string[];
   options: {
     colors: string[];

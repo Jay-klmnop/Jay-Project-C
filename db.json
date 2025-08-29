@@ -5,7 +5,8 @@
       "name": "Ocean Original Fit T-shirt No. 01",
       "category": "T-shirts",
       "price": 17000,
-      "discountPrice": 15300,
+      "discountPrice": 1700,
+      "calculatedPrice": 15300,
       "tags": ["ocean", "original-fit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -99,7 +100,8 @@
       "name": "Ocean Original Fit T-shirt No. 02",
       "category": "T-shirts",
       "price": 17000,
-      "discountPrice": 15300,
+      "discountPrice": 1700,
+      "calculatedPrice": 15300,
       "tags": ["ocean", "original-fit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -193,7 +195,8 @@
       "name": "Ocean Original Fit T-shirt No. 03",
       "category": "T-shirts",
       "price": 17000,
-      "discountPrice": 15300,
+      "discountPrice": 1700,
+      "calculatedPrice": 15300,
       "tags": ["ocean", "original-fit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -287,7 +290,8 @@
       "name": "Ocean Original Fit T-shirt No. 04",
       "category": "T-shirts",
       "price": 17000,
-      "discountPrice": 15300,
+      "discountPrice": 1700,
+      "calculatedPrice": 15300,
       "tags": ["ocean", "original-fit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -381,7 +385,8 @@
       "name": "Ocean Original Fit T-shirt No. 05",
       "category": "T-shirts",
       "price": 17000,
-      "discountPrice": 15300,
+      "discountPrice": 1700,
+      "calculatedPrice": 15300,
       "tags": ["ocean", "original-fit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -476,6 +481,7 @@
       "category": "T-shirts",
       "price": 18000,
       "discountPrice": 0,
+      "calculatedPrice": 18000,
       "tags": ["forest", "overfit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -570,6 +576,7 @@
       "category": "T-shirts",
       "price": 18000,
       "discountPrice": 0,
+      "calculatedPrice": 18000,
       "tags": ["forest", "overfit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -664,6 +671,7 @@
       "category": "T-shirts",
       "price": 18000,
       "discountPrice": 0,
+      "calculatedPrice": 18000,
       "tags": ["forest", "overfit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -758,6 +766,7 @@
       "category": "T-shirts",
       "price": 18000,
       "discountPrice": 0,
+      "calculatedPrice": 18000,
       "tags": ["forest", "overfit", "graphic-tee"],
       "options": {
         "colors": ["Black", "White"],
@@ -852,6 +861,7 @@
       "category": "T-shirts",
       "price": 18000,
       "discountPrice": 0,
+      "calculatedPrice": 18000,
       "tags": ["forest", "overfit", "graphic-tee", "featured"],
       "options": {
         "colors": ["Black", "White"],
@@ -946,6 +956,7 @@
       "category": "Sweatshirts",
       "price": 21900,
       "discountPrice": 0,
+      "calculatedPrice": 21900,
       "tags": ["cloud", "unisex", "crewneck-sweatshirt", "featured"],
       "options": {
         "colors": ["Black", "White"],
@@ -1040,6 +1051,7 @@
       "category": "Sweatshirts",
       "price": 21900,
       "discountPrice": 0,
+      "calculatedPrice": 21900,
       "tags": ["cloud", "unisex", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1134,6 +1146,7 @@
       "category": "Sweatshirts",
       "price": 21900,
       "discountPrice": 0,
+      "calculatedPrice": 21900,
       "tags": ["cloud", "unisex", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1228,6 +1241,7 @@
       "category": "Sweatshirts",
       "price": 21900,
       "discountPrice": 0,
+      "calculatedPrice": 21900,
       "tags": ["cloud", "unisex", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1322,6 +1336,7 @@
       "category": "Sweatshirts",
       "price": 21900,
       "discountPrice": 0,
+      "calculatedPrice": 21900,
       "tags": ["cloud", "unisex", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1416,6 +1431,7 @@
       "category": "Sweatshirts",
       "price": 22200,
       "discountPrice": 0,
+      "calculatedPrice": 21900,
       "tags": ["monochrome", "overfit", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1510,6 +1526,7 @@
       "category": "Sweatshirts",
       "price": 22200,
       "discountPrice": 0,
+      "calculatedPrice": 21900,
       "tags": ["monochrome", "overfit", "crewneck-sweatshirt", "featured"],
       "options": {
         "colors": ["Black", "White"],
@@ -1604,6 +1621,7 @@
       "category": "Sweatshirts",
       "price": 22200,
       "discountPrice": 0,
+      "calculatedPrice": 21900,
       "tags": ["monochrome", "overfit", "crewneck-sweatshirt", "featured"],
       "options": {
         "colors": ["Black", "White"],
@@ -1698,6 +1716,7 @@
       "category": "Sweatshirts",
       "price": 22200,
       "discountPrice": 0,
+      "calculatedPrice": 21900,
       "tags": ["monochrome", "overfit", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1792,6 +1811,7 @@
       "category": "Sweatshirts",
       "price": 22200,
       "discountPrice": 0,
+      "calculatedPrice": 21900,
       "tags": ["monochrome", "overfit", "crewneck-sweatshirt"],
       "options": {
         "colors": ["Black", "White"],
@@ -1886,6 +1906,7 @@
       "category": "Hoodies",
       "price": 26900,
       "discountPrice": 0,
+      "calculatedPrice": 26900,
       "tags": ["vertical", "basic-fit", "graphic", "featured"],
       "options": {
         "colors": ["Black", "White"],
@@ -1980,6 +2001,7 @@
       "category": "Hoodies",
       "price": 26900,
       "discountPrice": 0,
+      "calculatedPrice": 26900,
       "tags": ["vertical", "basic-fit", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2074,6 +2096,7 @@
       "category": "Hoodies",
       "price": 26900,
       "discountPrice": 0,
+      "calculatedPrice": 26900,
       "tags": ["vertical", "basic-fit", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2168,6 +2191,7 @@
       "category": "Hoodies",
       "price": 26900,
       "discountPrice": 0,
+      "calculatedPrice": 26900,
       "tags": ["vertical", "basic-fit", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2262,6 +2286,7 @@
       "category": "Hoodies",
       "price": 26900,
       "discountPrice": 0,
+      "calculatedPrice": 26900,
       "tags": ["vertical", "basic-fit", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2356,6 +2381,7 @@
       "category": "Hoodies",
       "price": 30900,
       "discountPrice": 0,
+      "calculatedPrice": 30900,
       "tags": ["Street sign", "light", "graphic", "featured"],
       "options": {
         "colors": ["Black", "White"],
@@ -2450,6 +2476,7 @@
       "category": "Hoodies",
       "price": 30900,
       "discountPrice": 0,
+      "calculatedPrice": 30900,
       "tags": ["Street sign", "light", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2544,6 +2571,7 @@
       "category": "Hoodies",
       "price": 30900,
       "discountPrice": 0,
+      "calculatedPrice": 30900,
       "tags": ["Street sign", "light", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2638,6 +2666,7 @@
       "category": "Hoodies",
       "price": 30900,
       "discountPrice": 0,
+      "calculatedPrice": 30900,
       "tags": ["Street sign", "light", "graphic", "featured"],
       "options": {
         "colors": ["Black", "White"],
@@ -2732,6 +2761,7 @@
       "category": "Hoodies",
       "price": 30900,
       "discountPrice": 0,
+      "calculatedPrice": 30900,
       "tags": ["street-sign", "light", "graphic"],
       "options": {
         "colors": ["Black", "White"],
@@ -2826,6 +2856,7 @@
       "category": "Outwear",
       "price": 25300,
       "discountPrice": 0,
+      "calculatedPrice": 25300,
       "tags": ["simple", "light", "jacket", "featured"],
       "options": {
         "colors": ["Black", "White"],
@@ -2920,6 +2951,7 @@
       "category": "Outwear",
       "price": 53000,
       "discountPrice": 0,
+      "calculatedPrice": 53000,
       "tags": ["autumn", "baseball", "jacket"],
       "options": {
         "colors": ["Black", "White"],

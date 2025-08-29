@@ -35,11 +35,6 @@ export function FeaturedProducts() {
       </div>
     );
 
-  const handleAddToCart = (product: ProductType) => {
-    // Integrate with cart state/store here
-    console.log('Add to cart:', product.id);
-  };
-
   return (
     <>
       <nav className='mx-5 my-4 flex gap-4 text-xs font-black'>
@@ -55,11 +50,7 @@ export function FeaturedProducts() {
       </nav>
       <div className='mx-4 my-4 grid flex-[3] grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4'>
         {filteredProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            addToCart={() => handleAddToCart(product)}
-          />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </>

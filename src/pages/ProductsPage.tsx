@@ -1,9 +1,9 @@
-import ProductList from '@/components/slices/ProductList';
+import { ProductList } from '@/components/products';
 
 export default function ProductsPage() {
   return (
     <>
-      <ProductList addToCart={(product) => console.log('Add to cart:', product)} />
+      <ProductList />
     </>
   );
 }

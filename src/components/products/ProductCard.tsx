@@ -1,13 +1,16 @@
-import type { ProductType } from '@/types/product';
+import type { ProductType } from '@/types';
 import { Button } from '@/components/common';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/RTK';
 
 interface ProductCardProps {
   product: ProductType;
-  addToCart: () => void;
 }
 
-export default function ProductCard({ product, addToCart }: ProductCardProps) {
+export default function ProductCard({ product }: ProductCardProps) {
+  const dispatch = useDispatch();
+
   const getImageUrl = (path: string): string => {
     return new URL(path, import.meta.url).href;
   };
@@ -15,6 +18,11 @@ export default function ProductCard({ product, addToCart }: ProductCardProps) {
   const [currentImageUrl, setCurrentImageUrl] = useState(
     getImageUrl(product.variants.find((v) => v.color === 'Black')?.images.thumbnail || '')
   );
+
+  const handleAddToCart = () => {
+    const defaultVariant = product.variants[0];
+    dispatch(addToCart({ product, selectedVariant: defaultVariant }));
+  };
 
   const handleMouseEnter = () => {
     const whiteVariantImage = getImageUrl(
@@ -46,9 +54,9 @@ export default function ProductCard({ product, addToCart }: ProductCardProps) {
         className='h-full w-full rounded-md object-cover'
       />
       <h3 className='my-2 font-bold'>{product.name}</h3>
-      <p className='font-bold text-black'>₩{product.price.toLocaleString()}</p>
+      <p className='font-bold text-black'>₩{product.calculatedPrice.toLocaleString()}</p>
       <Button
-        onClick={addToCart}
+        onClick={handleAddToCart}
         variant='filled-dark'
         shape='rounded'
         size='small'

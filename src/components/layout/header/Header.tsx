@@ -1,8 +1,14 @@
 import { InternalLink } from '@/components/common';
-import { NavMain, NavSub, UserActions } from '@/components/layout/header';
+import { NavMain, NavSub, UserActions } from '@/components/layout';
+import { toggleCart } from '@/RTK';
 import { ListIcon } from '@phosphor-icons/react';
+import { useDispatch } from 'react-redux';
 
 export default function Header() {
+  const dispatch = useDispatch();
+  const handleCartClick = () => {
+    dispatch(toggleCart());
+  };
   return (
     <header className='fixed top-0 z-50 w-full'>
       <div className='absolute inset-x-0 top-0 h-full bg-gradient-to-b from-neutral-400 to-transparent'></div>
@@ -18,7 +24,7 @@ export default function Header() {
 
           <div className='flex shrink-0 items-center gap-4'>
             <NavSub className='hidden lg:flex' />
-            <UserActions className='hidden sm:flex' />
+            <UserActions onCartClick={handleCartClick} className='hidden sm:flex' />
             <button className='lg:hidden'>
               <ListIcon size={20} />
             </button>
