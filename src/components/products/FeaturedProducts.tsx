@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useFetch } from '@/hooks/useFetch';
-import type { ProductType } from '@/types/product';
+import type { ProductType } from '@/types';
 import _ from 'lodash';
 import ProductCard from './ProductCard';
 

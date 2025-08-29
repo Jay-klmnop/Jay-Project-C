@@ -1,4 +1,4 @@
-import { SocialLinks, FooterLogo } from '@/components/layout/footer';
+import { SocialLinks, FooterLogo } from '@/components/layout';
 import { InternalLink } from '@/components/common';
 
 export default function Footer() {

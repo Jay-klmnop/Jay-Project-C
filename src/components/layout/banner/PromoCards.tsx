@@ -1,4 +1,4 @@
-import type { PromoItemType } from '@/constants/promotions';
+import type { PromoItemType } from '@/constants';
 
 interface PromoCardProps {
   item: PromoItemType;
