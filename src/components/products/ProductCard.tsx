@@ -1,69 +1,64 @@
 import type { ProductType } from '@/types';
-import { Button } from '@/components/common';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '@/RTK';
+import { InternalLink } from '@/components/common';
+import { useEffect, useState } from 'react';
+import type { MouseEvent } from 'react';
 
 interface ProductCardProps {
   product: ProductType;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const dispatch = useDispatch();
-
   const getImageUrl = (path: string): string => {
     return new URL(path, import.meta.url).href;
   };
 
-  const [currentImageUrl, setCurrentImageUrl] = useState(
-    getImageUrl(product.variants.find((v) => v.color === 'Black')?.images.thumbnail || '')
-  );
+  const [selectedColor, setSelectedColor] = useState('Black');
+  const selectedVariant =
+    product.variants.find((v) => v.color === selectedColor) || product.variants[0];
 
-  const handleAddToCart = () => {
-    const defaultVariant = product.variants[0];
-    dispatch(addToCart({ product, selectedVariant: defaultVariant }));
-  };
+  const imageUrl = getImageUrl(selectedVariant.images.thumbnail);
 
-  const handleMouseEnter = () => {
-    const whiteVariantImage = getImageUrl(
-      product.variants.find((v) => v.color === 'White')?.images.thumbnail || ''
-    );
-    if (whiteVariantImage) {
-      setCurrentImageUrl(whiteVariantImage);
-    }
-  };
+  useEffect(() => {
+    product.options.colors.forEach((color) => {
+      const variant = product.variants.find((v) => v.color === color);
+      if (variant) {
+        const image = new Image();
+        image.src = getImageUrl(variant.images.thumbnail);
+      }
+    });
+  }, [product]);
 
-  const handleMouseLeave = () => {
-    const blackVariantImage = getImageUrl(
-      product.variants.find((v) => v.color === 'Black')?.images.thumbnail || ''
-    );
-    if (blackVariantImage) {
-      setCurrentImageUrl(blackVariantImage);
-    }
+  const handleColorChange = (e: MouseEvent, color: string) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setSelectedColor(color);
   };
 
   return (
-    <div
-      className='flex min-h-[320px] flex-col items-center rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out'
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <img
-        src={currentImageUrl}
-        alt={product.name}
-        className='h-full w-full rounded-md object-cover'
-      />
-      <h3 className='my-2 font-bold'>{product.name}</h3>
-      <p className='font-bold text-black'>₩{product.calculatedPrice.toLocaleString()}</p>
-      <Button
-        onClick={handleAddToCart}
-        variant='filled-dark'
-        shape='rounded'
-        size='small'
-        className='my-4'
-      >
-        Add To Cart
-      </Button>
-    </div>
+    <InternalLink to={`/products/${product.id}`}>
+      <div className='flex max-h-96 min-h-80 flex-col items-center rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out'>
+        <img
+          src={imageUrl}
+          alt={product.name}
+          className='h-full w-full min-w-52 rounded-md object-cover'
+        />
+        <div className='h-16'>
+          <h3 className='my-2 font-bold'>{product.name}</h3>
+          <p className='font-bold text-black'>₩{product.calculatedPrice.toLocaleString()}</p>
+        </div>
+        <div className='my-2 flex justify-center gap-2'>
+          {product.options.colors.map((color) => (
+            <button
+              key={color}
+              type='button'
+              onClick={(e) => handleColorChange(e, color)}
+              className={`h-5 w-5 rounded-full border-2 ${
+                color === 'Black' ? 'bg-black' : 'bg-white'
+              } ${selectedColor === color ? 'border-neutral-400' : 'border-transparent'}`}
+            ></button>
+          ))}
+        </div>
+      </div>
+    </InternalLink>
   );
 }

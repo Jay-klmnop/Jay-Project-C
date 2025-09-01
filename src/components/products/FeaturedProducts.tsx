@@ -1,16 +1,24 @@
-import { useMemo, useState } from 'react';
-import { useFetch } from '@/hooks/useFetch';
-import type { ProductType } from '@/types';
+import { useEffect, useMemo, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import type { AppDispatch, RootState } from '@/RTK/store';
+import { fetchProducts } from '@/RTK';
 import _ from 'lodash';
 import ProductCard from './ProductCard';
 
 export function FeaturedProducts() {
+  const dispatch = useDispatch<AppDispatch>();
+  const products = useSelector((state: RootState) => state.products.products);
+  const status = useSelector((state: RootState) => state.products.status);
+  const error = useSelector((state: RootState) => state.products.error);
+
   const [filter, setFilter] = useState('featured');
   const filters = ['featured', 'recommended', 'discounted'];
 
-  const API_URL = `http://localhost:3001/products`;
-
-  const { data: products, loading, error } = useFetch<ProductType[]>(API_URL);
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchProducts());
+    }
+  }, [status, dispatch]);
 
   const filteredProducts = useMemo(() => {
     const safeProducts = products ?? [];
@@ -21,22 +29,23 @@ export function FeaturedProducts() {
       return _.shuffle(safeProducts).slice(0, 8);
     }
     if (filter === 'discounted') {
-      return safeProducts.filter((p) => p.discountPrice != 0 || null);
+      return safeProducts.filter((p) => p.discountPrice);
     }
     return safeProducts;
   }, [products, filter]);
 
-  if (loading) return <div>Loading products...</div>;
-  if (error)
+  if (status === 'loading') return <div>Loading...</div>;
+  if (status === 'failed') {
     return (
       <div>
         Error fetching products, please try again <br />
-        {error.message}
+        {error}
       </div>
     );
+  }
 
   return (
-    <>
+    <div className='min-h-96 w-full'>
       <nav className='mx-5 my-4 flex gap-4 text-xs font-black'>
         {filters.map((filterName) => (
           <button
@@ -53,6 +62,6 @@ export function FeaturedProducts() {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-    </>
+    </div>
   );
 }

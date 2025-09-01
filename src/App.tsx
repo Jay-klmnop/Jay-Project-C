@@ -10,6 +10,7 @@ import {
   LikedPage,
   CartPage,
   ProfilePage,
+  ProductDetailPage,
 } from '@/pages';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/liked' element={<LikedPage />} />
         <Route path='/cart' element={<CartPage />} />
         <Route path='/profile' element={<ProfilePage />} />
+        <Route path='/products/:id' element={<ProductDetailPage />} />
       </Route>
     </Routes>
   );
