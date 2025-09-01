@@ -19,7 +19,7 @@ export function CartSidebar() {
       onClick={() => dispatch(closeCart())}
     >
       <div
-        className='fixed right-0 top-0 z-50 h-full w-96 bg-neutral-200 p-4'
+        className='fixed right-0 top-0 z-50 h-full w-96 bg-neutral-200 p-6'
         onClick={(e) => e.stopPropagation()}
       >
         <h1>Cart</h1>
@@ -36,8 +36,8 @@ export function CartSidebar() {
               .toLocaleString()}
           </h2>
         )}
+        <button onClick={() => dispatch(closeCart())}>Close</button>
       </div>
-      <button onClick={() => dispatch(closeCart())}>Close</button>
     </div>
   );
 }

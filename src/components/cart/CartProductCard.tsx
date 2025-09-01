@@ -16,7 +16,7 @@ export function CartProductCard({ item }: CartProductCardProps) {
   return (
     <section
       key={item.sku}
-      className='m-4 flex flex-row items-center justify-evenly gap-2 rounded-md bg-neutral-400 p-4 text-xs font-semibold'
+      className='my-4 flex flex-row items-center justify-evenly gap-4 rounded-md bg-neutral-400 p-4 text-xs font-semibold'
     >
       <img src={getImageUrl(item.image)} alt={item.name} className='h-20 w-20' />
       <div className='flex flex-col'>
