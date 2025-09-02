@@ -1,29 +1,26 @@
-import dbData from './db.json';
-import type { ProductType } from '../src/types';
+import dbData from './db.json' with { type: 'json' };
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-interface DbType {
-  products: ProductType[];
-}
+const BASE_URL = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : 'https://localhost:5173';
 
-const db: DbType = dbData;
-
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(_req: VercelRequest, res: VercelResponse) {
   try {
-    const products = db.products;
+    const products = dbData.products;
 
-    const { id } = req.query;
+    const productsWithFullImageUrls = products.map((product) => ({
+      ...product,
+      variants: product.variants.map((variant) => ({
+        ...variant,
+        images: {
+          thumbnail: `${BASE_URL}${variant.images.thumbnail}`,
+          large: `${BASE_URL}${variant.images.large}`,
+        },
+      })),
+    }));
 
-    if (id) {
-      const product = products.find((p) => p.id === id);
-      if (product) {
-        res.status(200).json(product);
-      } else {
-        res.status(404).json({ message: `Product with id ${id} not found` });
-      }
-    } else {
-      res.status(200).json(products);
-    }
+    res.status(200).json(productsWithFullImageUrls);
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     res.status(500).json({ message: 'Internal Server Error', error: errorMessage });
