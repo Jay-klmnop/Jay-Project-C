@@ -5,7 +5,6 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react(), svgr()],
-  base: '/Jay-Project-C/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
