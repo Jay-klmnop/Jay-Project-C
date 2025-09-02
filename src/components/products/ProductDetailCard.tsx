@@ -9,10 +9,6 @@ interface ProductDetailCardProps {
 }
 
 export default function ProductDetail({ product, onAddToCart }: ProductDetailCardProps) {
-  const getImageUrl = (path: string): string => {
-    return new URL(path, import.meta.url).href;
-  };
-
   const [selectedColor, setSelectedColor] = useState(product.options.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.options.sizes[1]);
 
@@ -28,10 +24,10 @@ export default function ProductDetail({ product, onAddToCart }: ProductDetailCar
   return (
     <div className='mx-5 my-4 flex min-h-80 min-w-60 flex-col items-center justify-center rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out lg:flex-row lg:justify-around lg:text-sm'>
       <ImageWithPlaceholder
-        src={getImageUrl(
+        src={
           product.variants.find((v) => v.color === selectedColor)?.images.large ||
-            product.variants[0].images.large
-        )}
+          product.variants[0].images.large
+        }
         alt={product.name}
         className='h-full max-h-96 w-full max-w-96 rounded-md object-cover object-top'
       />
