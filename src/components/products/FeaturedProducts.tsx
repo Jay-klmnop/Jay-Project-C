@@ -57,7 +57,7 @@ export function FeaturedProducts() {
           </button>
         ))}
       </nav>
-      <div className='mx-4 my-4 grid flex-[3] grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4'>
+      <div className='mx-4 my-4 grid flex-[3] grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4'>
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

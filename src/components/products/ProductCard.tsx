@@ -36,12 +36,14 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <InternalLink to={`/products/${product.id}`}>
-      <div className='flex max-h-96 min-h-80 flex-col items-center rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out'>
-        <img
-          src={imageUrl}
-          alt={product.name}
-          className='h-full w-full min-w-52 rounded-md object-cover'
-        />
+      <div className='flex max-h-96 min-h-80 min-w-60 flex-col items-center gap-4 rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out'>
+        <div className='relative flex h-56 w-full grow'>
+          <img
+            src={imageUrl}
+            alt={product.name}
+            className='absolute inset-0 h-full w-full object-contain'
+          />
+        </div>
         <div className='h-16'>
           <h3 className='my-2 font-bold'>{product.name}</h3>
           <p className='font-bold text-black'>₩{product.calculatedPrice.toLocaleString()}</p>
