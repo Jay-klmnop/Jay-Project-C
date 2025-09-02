@@ -15,10 +15,10 @@ export function FeaturedProducts() {
   const filters = ['featured', 'recommended', 'discounted'];
 
   useEffect(() => {
-    if (status === 'idle') {
+    if (products.length === 0) {
       dispatch(fetchProducts());
     }
-  }, [status, dispatch]);
+  }, [dispatch, products.length]);
 
   const filteredProducts = useMemo(() => {
     const safeProducts = products ?? [];
