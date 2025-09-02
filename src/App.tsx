@@ -1,6 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from '@/components/layout';
-import '@/index.css';
+import { useDispatch, useSelector } from 'react-redux';
+import type { AppDispatch, RootState } from './RTK/store';
+import { useEffect } from 'react';
+import { fetchProducts } from './RTK';
 
 import {
   HomePage,
@@ -12,8 +15,18 @@ import {
   ProfilePage,
   ProductDetailPage,
 } from '@/pages';
+import '@/index.css';
 
 function App() {
+  const dispatch = useDispatch<AppDispatch>();
+  const status = useSelector((state: RootState) => state.products.status);
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchProducts());
+    }
+  }, [status, dispatch]);
+
   return (
     <Routes>
       <Route element={<Layout />}>

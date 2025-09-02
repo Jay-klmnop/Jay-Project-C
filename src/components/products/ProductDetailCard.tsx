@@ -1,17 +1,13 @@
-import type { ProductType } from '@/types';
+import type { ProductType, ProductVariant } from '@/types';
 import { Button } from '../common';
-import { addToCart } from '@/RTK';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import type { AppDispatch } from '@/RTK/store';
 
-interface ProductDetailProps {
+interface ProductDetailCardProps {
   product: ProductType;
+  onAddToCart: (selectedVariant: ProductVariant) => void;
 }
 
-export default function ProductDetail({ product }: ProductDetailProps) {
-  const dispatch = useDispatch<AppDispatch>();
-
+export default function ProductDetail({ product, onAddToCart }: ProductDetailCardProps) {
   const getImageUrl = (path: string): string => {
     return new URL(path, import.meta.url).href;
   };
@@ -19,15 +15,13 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   const [selectedColor, setSelectedColor] = useState(product.options.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.options.sizes[1]);
 
-  const handleAddToCart = () => {
+  const handleButtonClick = () => {
     const selectedVariant = product.variants.find(
-      (variant) => variant.color === selectedColor && selectedSize
+      (variant) => variant.color === selectedColor && variant.size === selectedSize
     );
-    if (!selectedVariant) {
-      console.error('Selected variant not found!');
-      return;
+    if (selectedVariant) {
+      onAddToCart(selectedVariant);
     }
-    dispatch(addToCart({ product, selectedVariant: selectedVariant }));
   };
 
   return (
@@ -77,7 +71,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           shape='rounded'
           size='small'
           className='my-4'
-          onClick={handleAddToCart}
+          onClick={handleButtonClick}
         >
           Add To Cart
         </Button>

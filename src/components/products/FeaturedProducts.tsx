@@ -1,24 +1,17 @@
-import { useEffect, useMemo, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import type { AppDispatch, RootState } from '@/RTK/store';
-import { fetchProducts } from '@/RTK';
+import { useMemo, useState } from 'react';
+import { useSelector } from 'react-redux';
+import type { RootState } from '@/RTK/store';
 import _ from 'lodash';
 import ProductCard from './ProductCard';
+import { CardSkeleton } from '@/components/common';
 
 export function FeaturedProducts() {
-  const dispatch = useDispatch<AppDispatch>();
   const products = useSelector((state: RootState) => state.products.products);
   const status = useSelector((state: RootState) => state.products.status);
   const error = useSelector((state: RootState) => state.products.error);
 
   const [filter, setFilter] = useState('featured');
   const filters = ['featured', 'recommended', 'discounted'];
-
-  useEffect(() => {
-    if (products.length === 0) {
-      dispatch(fetchProducts());
-    }
-  }, [dispatch, products.length]);
 
   const filteredProducts = useMemo(() => {
     const safeProducts = products ?? [];
@@ -34,9 +27,14 @@ export function FeaturedProducts() {
     return safeProducts;
   }, [products, filter]);
 
-  if (status === 'loading') return <div>Loading...</div>;
-  if (status === 'failed') {
-    return (
+  let content;
+
+  if (status === 'loading' || status === 'idle') {
+    content = Array.from({ length: 4 }).map((_, index) => <CardSkeleton key={index} />);
+  } else if (status === 'succeeded') {
+    content = filteredProducts.map((product) => <ProductCard key={product.id} product={product} />);
+  } else if (status === 'failed') {
+    content = (
       <div>
         Error fetching products, please try again <br />
         {error}
@@ -58,9 +56,7 @@ export function FeaturedProducts() {
         ))}
       </nav>
       <div className='mx-4 my-4 grid flex-[3] grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4'>
-        {filteredProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        {content}
       </div>
     </div>
   );
