@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs/promises';
 
 export default async function handler(req, res) {
-  const jsonFilePath = path.join(process.cwd(), 'db.json');
+  const jsonFilePath = path.join(process.cwd(), 'api', 'db.json');
 
   try {
     const fileContents = await fs.readFile(jsonFilePath, 'utf8');
@@ -11,6 +11,11 @@ export default async function handler(req, res) {
 
     res.status(200).json(data.products);
   } catch (error) {
-    res.status(500).json({ message: 'Error reading data file' });
+    console.error(`Error reading file at: ${jsonFilePath}`, error);
+    res.status(500).json({
+      message: 'Error reading data file',
+      errorDetails: error.message,
+      attemptedPath: jsonFilePath,
+    });
   }
 }
