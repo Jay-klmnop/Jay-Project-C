@@ -2,6 +2,7 @@ import type { ProductType } from '@/types';
 import { InternalLink } from '@/components/common';
 import { useEffect, useState } from 'react';
 import type { MouseEvent } from 'react';
+import { ImageWithPlaceholder } from '../common/ImageWithPlaceholder';
 
 interface ProductCardProps {
   product: ProductType;
@@ -38,7 +39,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     <InternalLink to={`/products/${product.id}`}>
       <div className='flex max-h-96 min-h-80 min-w-60 flex-col items-center gap-4 rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out'>
         <div className='relative flex h-56 w-full grow'>
-          <img
+          <ImageWithPlaceholder
             src={imageUrl}
             alt={product.name}
             className='absolute inset-0 h-full w-full object-contain'

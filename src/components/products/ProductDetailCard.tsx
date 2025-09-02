@@ -1,6 +1,7 @@
 import type { ProductType, ProductVariant } from '@/types';
 import { Button } from '../common';
 import { useState } from 'react';
+import { ImageWithPlaceholder } from '../common/ImageWithPlaceholder';
 
 interface ProductDetailCardProps {
   product: ProductType;
@@ -26,7 +27,7 @@ export default function ProductDetail({ product, onAddToCart }: ProductDetailCar
 
   return (
     <div className='mx-5 my-4 flex min-h-80 min-w-60 flex-col items-center justify-center rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out lg:flex-row lg:justify-around lg:text-sm'>
-      <img
+      <ImageWithPlaceholder
         src={getImageUrl(
           product.variants.find((v) => v.color === selectedColor)?.images.large ||
             product.variants[0].images.large
