@@ -1,4 +1,4 @@
-import promoImage1 from '@/assets/banner/banner_1.webp';
+import promoImage1 from '/assets/banner/banner_1.webp';
 
 interface HeroBannerProps {
   className?: string;
