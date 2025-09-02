@@ -1,21 +1,30 @@
-import path from 'path';
-import fs from 'fs/promises';
+import dbData from './db.json';
+import type { ProductType } from '../src/types';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-export default async function handler(req, res) {
-  const jsonFilePath = path.join(process.cwd(), 'api', 'db.json');
+interface DbType {
+  products: ProductType[];
+}
 
+const db: DbType = dbData;
+
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
-    const fileContents = await fs.readFile(jsonFilePath, 'utf8');
+    const products = db.products;
 
-    const data = JSON.parse(fileContents);
+    const { id } = req.query;
 
-    res.status(200).json(data.products);
+    if (id) {
+      const product = products.find((p) => p.id === id);
+      if (product) {
+        res.status(200).json(product);
+      } else {
+        res.status(404).json({ message: `Product with id ${id} not found` });
+      }
+    } else {
+      res.status(200).json(products);
+    }
   } catch (error) {
-    console.error(`Error reading file at: ${jsonFilePath}`, error);
-    res.status(500).json({
-      message: 'Error reading data file',
-      errorDetails: error.message,
-      attemptedPath: jsonFilePath,
-    });
+    res.status(500).json({ message: 'Internal Server Error', error: error.message });
   }
 }
