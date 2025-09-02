@@ -25,6 +25,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       res.status(200).json(products);
     }
   } catch (error) {
-    res.status(500).json({ message: 'Internal Server Error', error: error.message });
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    res.status(500).json({ message: 'Internal Server Error', error: errorMessage });
   }
 }
