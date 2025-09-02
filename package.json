@@ -2,7 +2,7 @@
   "name": "jay-project-c",
   "private": true,
   "version": "0.3.0",
-  "homepage": "https://jay-klmnop.github.io/Jay-Project-C",
+  "homepage": "https://jay-klmnop.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
