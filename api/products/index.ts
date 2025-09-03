@@ -1,11 +1,10 @@
-import dbData from './db.json' with { type: 'json' };
+import dbData from '../db.json';
+import { getBaseUrl } from '@/utils';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-const BASE_URL = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : 'https://localhost:5173';
+const BASE_URL = getBaseUrl();
 
-export default async function handler(_req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const products = dbData.products;
 
@@ -19,6 +18,13 @@ export default async function handler(_req: VercelRequest, res: VercelResponse) 
         },
       })),
     }));
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+
+    if (req.method === 'OPTIONS') {
+      return res.status(200).end();
+    }
 
     res.status(200).json(productsWithFullImageUrls);
   } catch (error) {
