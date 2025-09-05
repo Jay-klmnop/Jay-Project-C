@@ -1,4 +1,4 @@
-import dbData from '../db.json';
+import dbData from '../db';
 import { getBaseUrl } from '@/utils';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
