@@ -1,11 +1,12 @@
+'use client';
+
 import { InternalLink } from '@/components/common';
 import { NavMain, NavSub, UserActions } from '@/components/layout';
-import { toggleCart } from '@/RTK';
-import { ListIcon } from '@phosphor-icons/react';
-import { useDispatch } from 'react-redux';
+import { toggleCart, useAppDispatch } from '@/RTK';
+import { IoMdMenu } from 'react-icons/io';
 
 export default function Header() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleCartClick = () => {
     dispatch(toggleCart());
   };
@@ -15,7 +16,7 @@ export default function Header() {
       <div className='relative z-20 mx-auto w-full px-4 text-xs font-extrabold lg:px-6 lg:text-sm'>
         <div className='flex h-14 items-center justify-between py-4'>
           <div className='flex max-w-4xl items-center gap-6'>
-            <InternalLink to='/' className='text-sm font-black lg:text-base'>
+            <InternalLink href='/' className='text-sm font-black lg:text-base'>
               C:ODE
             </InternalLink>
             <div>search</div>
@@ -26,7 +27,7 @@ export default function Header() {
             <NavSub className='hidden lg:flex' />
             <UserActions onCartClick={handleCartClick} className='hidden sm:flex' />
             <button className='lg:hidden'>
-              <ListIcon size={20} />
+              <IoMdMenu size={20} />
             </button>
           </div>
         </div>

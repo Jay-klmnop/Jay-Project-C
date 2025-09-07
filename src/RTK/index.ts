@@ -1,3 +1,3 @@
-export { fetchProductById, fetchProducts } from './thunk';
+export { useAppDispatch, useAppSelector } from './hooks';
 export * from './slices';
 export * from './store';

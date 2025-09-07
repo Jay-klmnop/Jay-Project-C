@@ -1,11 +1,13 @@
+import { StaticImageData } from 'next/image';
+
 export interface ProductVariant {
   sku: string;
   color: string;
   size: string;
   stock: number;
   images: {
-    thumbnail: string;
-    large: string;
+    thumbnail: StaticImageData;
+    large: StaticImageData;
   };
 }
 export interface ProductType {

@@ -6,8 +6,8 @@ export default function Footer() {
     <div className='flex w-full flex-col items-start gap-2 bg-black px-4 py-4 text-xs font-semibold text-white'>
       <FooterLogo />
       <div className='flex w-full flex-row gap-4'>
-        <InternalLink to='/service'>service</InternalLink>
-        <InternalLink to='/assistance'>assistance</InternalLink>
+        <InternalLink href='/service'>service</InternalLink>
+        <InternalLink href='/assistance'>assistance</InternalLink>
       </div>
       <SocialLinks />
     </div>

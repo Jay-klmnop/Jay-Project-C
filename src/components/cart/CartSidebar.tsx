@@ -1,13 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { closeCart, store } from '@/RTK';
+'use client';
+
+import { closeCart, store, useAppDispatch, useAppSelector } from '@/RTK';
 import { CartProductCard } from './CartProductCard';
 
 type RootState = ReturnType<typeof store.getState>;
 
 export function CartSidebar() {
-  const dispatch = useDispatch();
-  const cartItems = useSelector((state: RootState) => state.cart.items);
-  const isCartOpen = useSelector((state: RootState) => state.ui.isCartOpen);
+  const dispatch = useAppDispatch();
+  const cartItems = useAppSelector((state: RootState) => state.cart.items);
+  const isCartOpen = useAppSelector((state: RootState) => state.ui.isCartOpen);
 
   if (!isCartOpen) {
     return null;
@@ -15,11 +16,11 @@ export function CartSidebar() {
 
   return (
     <div
-      className='fixed inset-0 z-40 bg-black bg-opacity-50'
+      className='bg-opacity-50 fixed inset-0 z-40 bg-black'
       onClick={() => dispatch(closeCart())}
     >
       <div
-        className='fixed right-0 top-0 z-50 h-full w-96 bg-neutral-200 p-6'
+        className='fixed top-0 right-0 z-50 h-full w-96 bg-neutral-200 p-6'
         onClick={(e) => e.stopPropagation()}
       >
         <h1>Cart</h1>

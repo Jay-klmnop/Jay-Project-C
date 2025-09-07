@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface InternalLinkProps {
-  to: string;
+  href: string;
   children: React.ReactNode;
   className?: string;
 }
 
-export default function InternalLink({ to, children, className }: InternalLinkProps) {
+export default function InternalLink({ href, children, className }: InternalLinkProps) {
   return (
-    <Link to={to} className={`${className ?? ''}`}>
+    <Link href={href} className={`${className ?? ''}`}>
       {children}
     </Link>
   );

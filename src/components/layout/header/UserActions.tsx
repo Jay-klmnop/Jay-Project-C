@@ -1,5 +1,5 @@
 import { InternalLink } from '@/components/common';
-import { USER_ACTIONS_LINKS } from '@/constants/navigation';
+import { USER_ACTIONS_LINKS } from '@/constants';
 
 interface UserActionsProps {
   className?: string;
@@ -18,8 +18,8 @@ export default function UserActions({ className, onCartClick }: UserActionsProps
           );
         }
 
-        return link.to ? (
-          <InternalLink key={link.to} to={link.to}>
+        return link.href ? (
+          <InternalLink key={link.href} href={link.href}>
             <button>{link.label}</button>
           </InternalLink>
         ) : null;

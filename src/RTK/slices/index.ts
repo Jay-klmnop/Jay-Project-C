@@ -1,5 +1,6 @@
 export {
   cartSlice,
+  setCart,
   addToCart,
   removeFromCart,
   increaseQuantity,
