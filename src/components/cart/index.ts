@@ -1,2 +1,2 @@
-export { CartProductCard } from './CartProductCard';
-export { CartSidebar } from './CartSidebar';
+export { CartProductCard } from "./CartProductCard";
+export { CartSidebar } from "./CartSidebar";

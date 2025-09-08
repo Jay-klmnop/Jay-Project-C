@@ -1,51 +1,30 @@
+'use client';
+
 import { useMemo, useState } from 'react';
-import { useSelector } from 'react-redux';
-import type { RootState } from '@/RTK/store';
-import _ from 'lodash';
-import ProductCard from './ProductCard';
-import { CardSkeleton } from '@/components/common';
+import { ProductType } from '@/types';
+import ProductGrid from './ProductGrid';
+import {
+  FEATURED_SECTION_FILTER_NAMES,
+  FEATURED_SECTION_FILTERS,
+  ProductFilterType,
+} from '@/constants';
 
-export function FeaturedProducts() {
-  const products = useSelector((state: RootState) => state.products.products);
-  const status = useSelector((state: RootState) => state.products.status);
-  const error = useSelector((state: RootState) => state.products.error);
+interface FeaturedProductsProps {
+  products: ProductType[];
+}
 
-  const [filter, setFilter] = useState('featured');
-  const filters = ['featured', 'recommended', 'discounted'];
+export function FeaturedProducts({ products }: FeaturedProductsProps) {
+  const [filter, setFilter] = useState<ProductFilterType>('featured');
 
   const filteredProducts = useMemo(() => {
-    const safeProducts = products ?? [];
-    if (filter === 'featured') {
-      return safeProducts.filter((p) => p.tags.includes('featured'));
-    }
-    if (filter === 'recommended') {
-      return _.shuffle(safeProducts).slice(0, 8);
-    }
-    if (filter === 'discounted') {
-      return safeProducts.filter((p) => p.discountPrice);
-    }
-    return safeProducts;
+    const filterFunction = FEATURED_SECTION_FILTERS[filter];
+    return filterFunction ? filterFunction(products) : products;
   }, [products, filter]);
-
-  let content;
-
-  if (status === 'loading' || status === 'idle') {
-    content = Array.from({ length: 4 }).map((_, index) => <CardSkeleton key={index} />);
-  } else if (status === 'succeeded') {
-    content = filteredProducts.map((product) => <ProductCard key={product.id} product={product} />);
-  } else if (status === 'failed') {
-    content = (
-      <div>
-        Error fetching products, please try again <br />
-        {error}
-      </div>
-    );
-  }
 
   return (
     <div className='min-h-96 w-full'>
       <nav className='mx-5 my-4 flex gap-4 text-xs font-black'>
-        {filters.map((filterName) => (
+        {FEATURED_SECTION_FILTER_NAMES.map((filterName) => (
           <button
             key={filterName}
             onClick={() => setFilter(filterName)}
@@ -55,9 +34,7 @@ export function FeaturedProducts() {
           </button>
         ))}
       </nav>
-      <div className='mx-4 my-4 grid flex-[3] grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4'>
-        {content}
-      </div>
+      <ProductGrid products={filteredProducts} />
     </div>
   );
 }

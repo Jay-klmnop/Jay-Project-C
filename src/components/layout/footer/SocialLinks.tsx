@@ -1,5 +1,5 @@
 import { ExternalLink } from '@/components/common';
-import { SOCIAL_LINKS } from '@/constants/footer';
+import { SOCIAL_LINKS } from '@/constants';
 
 interface SocialLinksProps {
   className?: string;

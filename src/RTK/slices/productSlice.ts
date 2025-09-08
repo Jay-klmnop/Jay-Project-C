@@ -1,16 +1,15 @@
 import type { ProductType } from '@/types';
-import { createSlice } from '@reduxjs/toolkit';
-import { fetchProductById, fetchProducts } from '../thunk';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface ProductsState {
-  products: ProductType[];
+  allProducts: ProductType[];
   currentProduct: ProductType | null;
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   error: string | null;
 }
 
 const initialState: ProductsState = {
-  products: [],
+  allProducts: [],
   currentProduct: null,
   status: 'idle',
   error: null,
@@ -19,31 +18,21 @@ const initialState: ProductsState = {
 export const productSlice = createSlice({
   name: 'products',
   initialState,
-  reducers: {},
-  extraReducers(builder) {
-    builder
-      .addCase(fetchProducts.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchProducts.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.products = action.payload;
-      })
-      .addCase(fetchProductById.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchProductById.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.currentProduct = action.payload;
-      })
-      .addMatcher(
-        (action) => action.type.endsWith('/rejected'),
-        (state, action: any) => {
-          state.status = 'failed';
-          state.error = action.error?.message || 'Something went wrong';
-        }
-      );
+  reducers: {
+    setProducts(state, action: PayloadAction<ProductType[]>) {
+      state.allProducts = action.payload;
+      state.status = 'succeeded';
+    },
+    setCurrentProduct(state, action: PayloadAction<ProductType>) {
+      state.currentProduct = action.payload;
+      state.status = 'succeeded';
+    },
+    setLoading(state) {
+      state.status = 'loading';
+    },
   },
 });
+
+export const { setProducts, setCurrentProduct, setLoading } = productSlice.actions;
 
 export default productSlice.reducer;

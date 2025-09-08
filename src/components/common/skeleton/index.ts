@@ -1,2 +1,2 @@
-export * from './CardSkeleton';
-export * from './DetailPageSkeleton';
+export * from "./CardSkeleton";
+export * from "./DetailPageSkeleton";

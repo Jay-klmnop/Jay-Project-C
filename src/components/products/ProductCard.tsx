@@ -1,3 +1,5 @@
+'use client';
+
 import type { ProductType } from '@/types';
 import { InternalLink, ImageWithPlaceholder } from '@/components/common';
 import { useEffect, useState } from 'react';
@@ -17,7 +19,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       const variant = product.variants.find((v) => v.color === color);
       if (variant) {
         const image = new Image();
-        image.src = variant.images.thumbnail;
+        image.src = variant.images.thumbnail.src;
       }
     });
   }, [product]);
@@ -29,13 +31,14 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <InternalLink to={`/products/${product.id}`}>
+    <InternalLink href={`/products/${product.id}`}>
       <div className='flex max-h-96 min-h-80 min-w-60 flex-col items-center gap-4 rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out'>
         <div className='relative flex h-56 w-full grow'>
           <ImageWithPlaceholder
             src={selectedVariant.images.thumbnail}
             alt={product.name}
-            className='absolute inset-0 h-full w-full object-contain'
+            objectFit='contain'
+            className='h-full w-full'
           />
         </div>
         <div className='h-16'>

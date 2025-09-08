@@ -1,14 +1,15 @@
-import promoImage2 from '/assets/banner/banner_2.webp';
-import promoImage3 from '/assets/banner/banner_3.webp';
-import promoImage4 from '/assets/banner/banner_4.webp';
-import promoImage5 from '/assets/banner/banner_5.webp';
+import { StaticImageData } from 'next/image';
+import promoImage2 from '@/assets/banner/banner_2.webp';
+import promoImage3 from '@/assets/banner/banner_3.webp';
+import promoImage4 from '@/assets/banner/banner_4.webp';
+import promoImage5 from '@/assets/banner/banner_5.webp';
 
 export interface PromoItemType {
   id: number;
   title: string;
   description: string;
   link: string;
-  imageUrl: string;
+  imageUrl: StaticImageData;
 }
 
 export const PROMO_ITEMS: Record<string, PromoItemType> = {

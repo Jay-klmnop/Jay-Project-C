@@ -1,22 +1,28 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+const config = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       screens: {
-        sm: '375px',
-        md: '768px',
-        lg: '1200px',
+        sm: "375px",
+        md: "768px",
+        lg: "1200px",
       },
       fontFamily: {
-        sans: ['Pretendard Variable', 'Noto Sans', 'sans-serif'],
+        sans: ["Pretendard Variable", "Noto Sans", "sans-serif"],
       },
       margin: {
-        '10p': '10%',
-        '15p': '15%',
-        '20p': '20%',
+        "10p": "10%",
+        "15p": "15%",
+        "20p": "20%",
       },
     },
   },
   plugins: [],
 };
+
+export default config;
