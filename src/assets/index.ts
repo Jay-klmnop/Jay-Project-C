@@ -463,3 +463,5 @@ export const ProductImages = {
     },
   },
 };
+
+export { Pretendard } from './fonts/fonts';
