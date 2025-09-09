@@ -1,24 +1,81 @@
 @import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-black: oklch(14.479% 0.00002 271.152);
+  --color-dark-gray: oklch(20.463% 0.00002 271.152);
+  --color-gray: oklch(45.678% 0.00005 271.152);
+  --color-light-gray: oklch(97.015% 0.00011 271.152);
+  --color-white: oklch(100% 0.00011 271.152);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
+@layer base {
+  body {
+    background-color: var(--color-white);
+    color: var(--color-black);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    @variant dark {
+      background-color: var(--color-black);
+      color: var(--color-white);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Pretendard Variable', 'Noto Sans', 'sans-serif';
+@layer components {
+  .product-card {
+    background-color: oklch(from var(--color-light-gray) l c h / 50%);
+    color: var(--color-dark-gray);
+    @variant dark {
+      background-color: oklch(from var(--color-dark-gray) l c h / 50%);
+      color: var(--color-white);
+    }
+
+    @apply rounded-lg shadow-md;
+    @apply flex flex-col items-center justify-center text-center;
+  }
+
+  .filter-button {
+    @apply capitalize transition-colors;
+    color: var(--color-gray);
+    &[data-state='active'] {
+      a&,
+      & {
+        @apply font-bold;
+        color: var(--color-dark-gray);
+      }
+    }
+
+    &:hover {
+      a&,
+      & {
+        color: var(--color-dark-gray);
+      }
+    }
+
+    @variant dark {
+      @apply capitalize transition-colors;
+      color: var(--color-gray);
+      &[data-state='active'] {
+        a&,
+        & {
+          @apply font-bold;
+          color: var(--color-white);
+        }
+      }
+
+      &:hover {
+        a&,
+        & {
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+
+  .header-gradation {
+    @apply bg-gradient-to-b from-neutral-700 to-transparent;
+
+    @variant dark {
+      @apply bg-gradient-to-b from-neutral-100 to-transparent;
+    }
+  }
 }

@@ -30,7 +30,7 @@ export default function ProductDetail({ product }: ProductDetailCardProps) {
   };
 
   return (
-    <div className='mx-5 my-4 flex min-h-80 min-w-60 flex-col items-center justify-center rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out lg:flex-row lg:justify-around lg:text-sm'>
+    <div className='product-card'>
       <ImageWithPlaceholder
         src={selectedVariant.images.large}
         alt={product.name}
@@ -68,7 +68,7 @@ export default function ProductDetail({ product }: ProductDetailCardProps) {
               </Button>
             ))}
           </div>
-          <p className='font-bold text-black'>₩{product.price.toLocaleString()}</p>
+          <p className='font-bold'>₩{product.price.toLocaleString()}</p>
         </div>
         <Button
           variant='filled-dark'
