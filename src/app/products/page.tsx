@@ -5,7 +5,7 @@ export default async function ProductsPage() {
   const allProducts = await getAllProducts();
 
   return (
-    <div>
+    <div className='pt-14'>
       <ProductGrid products={allProducts} />
       <FeaturedProducts products={allProducts} />
     </div>
