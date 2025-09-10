@@ -1,8 +1,8 @@
 'use client';
 
-import { InternalLink } from '@/components/common';
 import { NavMain, NavSub, UserActions } from '@/components/layout';
 import { toggleCart, useAppDispatch } from '@/RTK';
+import Link from 'next/link';
 import { IoMdMenu } from 'react-icons/io';
 
 export default function Header() {
@@ -12,13 +12,13 @@ export default function Header() {
   };
   return (
     <header className='fixed top-0 z-50 w-full'>
-      <div className='absolute inset-x-0 top-0 h-full bg-gradient-to-b from-neutral-400 to-transparent'></div>
+      <div className='header-gradation absolute inset-x-0 top-0 h-full'></div>
       <div className='relative z-20 mx-auto w-full px-4 text-xs font-extrabold lg:px-6 lg:text-sm'>
         <div className='flex h-14 items-center justify-between py-4'>
           <div className='flex max-w-4xl items-center gap-6'>
-            <InternalLink href='/' className='text-sm font-black lg:text-base'>
+            <Link href='/' className='text-sm font-black lg:text-base'>
               C:ODE
-            </InternalLink>
+            </Link>
             <div>search</div>
             <NavMain className='hidden lg:flex' />
           </div>

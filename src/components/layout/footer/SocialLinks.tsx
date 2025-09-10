@@ -1,5 +1,5 @@
-import { ExternalLink } from '@/components/common';
 import { SOCIAL_LINKS } from '@/constants';
+import Link from 'next/link';
 
 interface SocialLinksProps {
   className?: string;
@@ -11,7 +11,15 @@ export default function SocialLinks({ className }: SocialLinksProps) {
       className={`flex flex-row items-center justify-center gap-4 lg:items-start ${className ?? ''}`}
     >
       {SOCIAL_LINKS.map(({ href, label }) => (
-        <ExternalLink key={href} href={href} label={label}></ExternalLink>
+        <Link
+          key={href}
+          href={href}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='your-link-styles'
+        >
+          {label}
+        </Link>
       ))}
     </div>
   );
