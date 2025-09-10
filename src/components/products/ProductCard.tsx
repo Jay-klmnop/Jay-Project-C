@@ -33,7 +33,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Link href={`/products/${product.id}`}>
-      <div className='product-card flex max-h-96 min-h-80 min-w-60 flex-col items-center gap-4 rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out'>
+      <div className='product-card relative max-h-96 min-h-80 min-w-60 gap-4 p-4 transition-opacity duration-300 ease-in-out'>
         <ImageWithPlaceholder
           src={selectedVariant.images.thumbnail}
           alt={product.name}
