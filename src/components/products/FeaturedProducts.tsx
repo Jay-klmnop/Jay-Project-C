@@ -28,7 +28,8 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
           <button
             key={filterName}
             onClick={() => setFilter(filterName)}
-            className={`${filter === filterName ? 'text-black' : 'text-neutral-700'} capitalize`}
+            data-state={`${filter === filterName ? 'active' : 'inactive'}`}
+            className='filter-button'
           >
             {filterName}
           </button>

@@ -1,8 +1,8 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { InternalLink } from '@/components/common';
 import { MAIN_NAV_LINKS } from '@/constants';
+import Link from 'next/link';
 
 interface NavMainProps {
   className?: string;
@@ -14,13 +14,14 @@ export default function NavMain({ className }: NavMainProps) {
   return (
     <nav className={`flex flex-row items-center gap-6 ${className ?? ''}`}>
       {MAIN_NAV_LINKS.map(({ href, label }) => (
-        <InternalLink
+        <Link
           key={label}
           href={href}
-          className={pathname === href ? 'text-black' : 'text-neutral-800'}
+          data-state={pathname === href ? 'active' : 'inactive'}
+          className='filter-button'
         >
           {label}
-        </InternalLink>
+        </Link>
       ))}
     </nav>
   );

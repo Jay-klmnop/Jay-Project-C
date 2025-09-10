@@ -1,8 +1,8 @@
 'use client';
 
-import { InternalLink } from '@/components/common';
 import { NavMain, NavSub, UserActions } from '@/components/layout';
 import { toggleCart, useAppDispatch } from '@/RTK';
+import Link from 'next/link';
 import { IoMdMenu } from 'react-icons/io';
 
 export default function Header() {
@@ -16,9 +16,9 @@ export default function Header() {
       <div className='relative z-20 mx-auto w-full px-4 text-xs font-extrabold lg:px-6 lg:text-sm'>
         <div className='flex h-14 items-center justify-between py-4'>
           <div className='flex max-w-4xl items-center gap-6'>
-            <InternalLink href='/' className='text-sm font-black lg:text-base'>
+            <Link href='/' className='text-sm font-black lg:text-base'>
               C:ODE
-            </InternalLink>
+            </Link>
             <div>search</div>
             <NavMain className='hidden lg:flex' />
           </div>

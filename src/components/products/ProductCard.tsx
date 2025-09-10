@@ -1,9 +1,10 @@
 'use client';
 
 import type { ProductType } from '@/types';
-import { InternalLink, ImageWithPlaceholder } from '@/components/common';
+import { ImageWithPlaceholder } from '@/components/common';
 import { useEffect, useState } from 'react';
 import type { MouseEvent } from 'react';
+import Link from 'next/link';
 
 interface ProductCardProps {
   product: ProductType;
@@ -31,7 +32,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <InternalLink href={`/products/${product.id}`}>
+    <Link href={`/products/${product.id}`}>
       <div className='product-card flex max-h-96 min-h-80 min-w-60 flex-col items-center gap-4 rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out'>
         <div className='relative flex h-56 w-full grow'>
           <ImageWithPlaceholder
@@ -58,6 +59,6 @@ export default function ProductCard({ product }: ProductCardProps) {
           ))}
         </div>
       </div>
-    </InternalLink>
+    </Link>
   );
 }
