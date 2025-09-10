@@ -1,9 +1,8 @@
 'use client';
 
 import type { ProductType } from '@/types';
-import { Button } from '@/components/common';
+import { Button, ImageWithPlaceholder } from '@/components/common';
 import { useState } from 'react';
-import { ImageWithPlaceholder } from '@/components/common/ImageWithPlaceholder';
 import { addToCart, useAppDispatch } from '@/RTK';
 
 interface ProductDetailCardProps {
@@ -30,12 +29,12 @@ export default function ProductDetail({ product }: ProductDetailCardProps) {
   };
 
   return (
-    <div className='product-card'>
+    <div className='product-card relative mx-5 my-4 flex min-h-80 min-w-60 p-4 transition-opacity duration-300 ease-in-out lg:flex-row lg:justify-around'>
       <ImageWithPlaceholder
         src={selectedVariant.images.large}
         alt={product.name}
-        width={selectedVariant.images.thumbnail.width}
-        height={selectedVariant.images.thumbnail.height}
+        width={selectedVariant.images.large.width}
+        height={selectedVariant.images.large.height}
         className='h-full max-h-96 w-full max-w-96 rounded-md object-cover object-top'
       />
       <div className='flex flex-col lg:pr-8'>
