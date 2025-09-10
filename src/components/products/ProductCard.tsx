@@ -34,16 +34,15 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Link href={`/products/${product.id}`}>
       <div className='product-card flex max-h-96 min-h-80 min-w-60 flex-col items-center gap-4 rounded-lg bg-neutral-200 p-4 text-center text-xs shadow-md transition-opacity duration-300 ease-in-out'>
-        <div className='relative flex h-56 w-full grow'>
-          <ImageWithPlaceholder
-            src={selectedVariant.images.thumbnail}
-            alt={product.name}
-            objectFit='contain'
-            className='h-full w-full'
-          />
-        </div>
-        <div className='h-16'>
-          <h3 className='my-2 font-bold'>{product.name}</h3>
+        <ImageWithPlaceholder
+          src={selectedVariant.images.thumbnail}
+          alt={product.name}
+          width={selectedVariant.images.thumbnail.width}
+          height={selectedVariant.images.thumbnail.height}
+          className='h-auto w-full min-w-32 rounded-md object-cover object-top'
+        />
+        <div className='flex h-14 flex-grow flex-col justify-between text-xs'>
+          <h3 className='mb-2 font-bold'>{product.name}</h3>
           <p className='font-bold'>₩{product.calculatedPrice.toLocaleString()}</p>
         </div>
         <div className='my-2 flex justify-center gap-2'>
