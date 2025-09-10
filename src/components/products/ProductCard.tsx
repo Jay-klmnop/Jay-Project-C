@@ -33,7 +33,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Link href={`/products/${product.id}`}>
-      <div className='product-card relative max-h-96 min-h-80 min-w-60 gap-4 bg-neutral-200 p-4 transition-opacity duration-300 ease-in-out'>
+      <div className='product-card relative max-h-96 min-h-80 min-w-60 gap-4 p-4 transition-opacity duration-300 ease-in-out'>
         <ImageWithPlaceholder
           src={selectedVariant.images.thumbnail}
           alt={product.name}
