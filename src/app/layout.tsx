@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Pretendard } from '@/assets';
 import { CartSidebar } from '@/components/cart';
 import { Footer, Header } from '@/components/layout';
-import { RTKProvider, CartProvider } from '@/components/providers';
+import { RTKProvider, CartProvider, ThemeProvider } from '@/components/providers';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,16 +16,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body className={`${Pretendard.variable} font-sans`}>
-        <RTKProvider>
-          <CartProvider>
-            <Header />
-            <CartSidebar />
-            <main>{children}</main>
-            <Footer />
-          </CartProvider>
-        </RTKProvider>
+        <ThemeProvider defaultTheme='system' attribute='class' enableSystem>
+          <RTKProvider>
+            <CartProvider>
+              <Header />
+              <CartSidebar />
+              <main>{children}</main>
+              <Footer />
+            </CartProvider>
+          </RTKProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
