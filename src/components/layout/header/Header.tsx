@@ -1,5 +1,6 @@
 'use client';
 
+import { ThemeToggleButton } from '@/components/common';
 import { NavMain, NavSub, UserActions } from '@/components/layout';
 import { toggleCart, useAppDispatch } from '@/RTK';
 import Link from 'next/link';
@@ -20,6 +21,7 @@ export default function Header() {
               C:ODE
             </Link>
             <div>search</div>
+            <ThemeToggleButton />
             <NavMain className='hidden lg:flex' />
           </div>
 
