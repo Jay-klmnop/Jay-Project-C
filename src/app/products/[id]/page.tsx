@@ -3,12 +3,12 @@ import { ProductDetailCard } from '@/components/products';
 import { getProductById } from '@/lib/data';
 
 interface ProductDetailPageProps {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ id: string }>;
 }
 
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
-  const product = await getProductById(params.id);
+  const { id } = await params;
+  const product = await getProductById(id);
 
   if (!product) {
     notFound();
