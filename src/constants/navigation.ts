@@ -6,7 +6,7 @@ export const MAIN_NAV_LINKS = [
 
 export const SUB_NAV_ITEMS = [
   { href: '/products', label: 'all' },
-  { href: '/t-shirts', label: 't-shirts' },
+  { href: '/tshirts', label: 'tshirts' },
   { href: '/sweatshirts', label: 'sweatshirts' },
   { href: '/hoodies', label: 'hoodies' },
   { href: '/outwear', label: 'outwear' },

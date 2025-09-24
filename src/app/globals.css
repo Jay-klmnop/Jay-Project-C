@@ -16,6 +16,9 @@
 }
 
 @layer components {
+  .centralize {
+    @apply flex items-center justify-center text-center;
+  }
   .product-card {
     background-color: theme(colors.neutral.100);
     color: theme(colors.neutral.900);
@@ -105,5 +108,10 @@
 
     @apply rounded-lg shadow-md;
     @apply flex flex-row items-center justify-evenly text-center;
+  }
+
+  .filter-group {
+    @apply flex items-center gap-2;
+    @apply md:flex-col md:items-start;
   }
 }

@@ -5,7 +5,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0001',
     name: 'Ocean Original Fit T-shirt No. 01',
-    category: 'T-shirts',
+    category: 'tshirts',
     price: 17000,
     discountPrice: 1700,
     calculatedPrice: 15300,
@@ -100,7 +100,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0002',
     name: 'Ocean Original Fit T-shirt No. 02',
-    category: 'T-shirts',
+    category: 'tshirts',
     price: 17000,
     discountPrice: 1700,
     calculatedPrice: 15300,
@@ -195,7 +195,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0003',
     name: 'Ocean Original Fit T-shirt No. 03',
-    category: 'T-shirts',
+    category: 'tshirts',
     price: 17000,
     discountPrice: 1700,
     calculatedPrice: 15300,
@@ -290,7 +290,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0004',
     name: 'Ocean Original Fit T-shirt No. 04',
-    category: 'T-shirts',
+    category: 'tshirts',
     price: 17000,
     discountPrice: 1700,
     calculatedPrice: 15300,
@@ -385,7 +385,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0005',
     name: 'Ocean Original Fit T-shirt No. 05',
-    category: 'T-shirts',
+    category: 'tshirts',
     price: 17000,
     discountPrice: 1700,
     calculatedPrice: 15300,
@@ -480,7 +480,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0006',
     name: 'Forest Overfit T-shirt No. 01',
-    category: 'T-shirts',
+    category: 'tshirts',
     price: 18000,
     discountPrice: 0,
     calculatedPrice: 18000,
@@ -575,7 +575,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0007',
     name: 'Forest Overfit T-shirt No. 02',
-    category: 'T-shirts',
+    category: 'tshirts',
     price: 18000,
     discountPrice: 0,
     calculatedPrice: 18000,
@@ -670,7 +670,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0008',
     name: 'Forest Overfit T-shirt No. 03',
-    category: 'T-shirts',
+    category: 'tshirts',
     price: 18000,
     discountPrice: 0,
     calculatedPrice: 18000,
@@ -765,7 +765,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0009',
     name: 'Forest Overfit T-shirt No. 04',
-    category: 'T-shirts',
+    category: 'tshirts',
     price: 18000,
     discountPrice: 0,
     calculatedPrice: 18000,
@@ -860,7 +860,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0010',
     name: 'Forest Overfit T-shirt No. 05',
-    category: 'T-shirts',
+    category: 'tshirts',
     price: 18000,
     discountPrice: 0,
     calculatedPrice: 18000,
@@ -955,7 +955,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0011',
     name: 'Cloud Unisex Sweatshirt No. 01',
-    category: 'Sweatshirts',
+    category: 'sweatshirts',
     price: 21900,
     discountPrice: 0,
     calculatedPrice: 21900,
@@ -1050,7 +1050,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0012',
     name: 'Cloud Unisex Sweatshirt No. 02',
-    category: 'Sweatshirts',
+    category: 'sweatshirts',
     price: 21900,
     discountPrice: 0,
     calculatedPrice: 21900,
@@ -1145,7 +1145,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0013',
     name: 'Cloud Unisex Sweatshirt No. 03',
-    category: 'Sweatshirts',
+    category: 'sweatshirts',
     price: 21900,
     discountPrice: 0,
     calculatedPrice: 21900,
@@ -1240,7 +1240,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0014',
     name: 'Cloud Unisex Sweatshirt No. 04',
-    category: 'Sweatshirts',
+    category: 'sweatshirts',
     price: 21900,
     discountPrice: 0,
     calculatedPrice: 21900,
@@ -1335,7 +1335,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0015',
     name: 'Cloud Unisex Sweatshirt No. 05',
-    category: 'Sweatshirts',
+    category: 'sweatshirts',
     price: 21900,
     discountPrice: 0,
     calculatedPrice: 21900,
@@ -1430,7 +1430,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0016',
     name: 'Monochrome Overfit Sweatshirt No. 01',
-    category: 'Sweatshirts',
+    category: 'sweatshirts',
     price: 22200,
     discountPrice: 0,
     calculatedPrice: 21900,
@@ -1525,7 +1525,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0017',
     name: 'Monochrome Overfit Sweatshirt No. 02',
-    category: 'Sweatshirts',
+    category: 'sweatshirts',
     price: 22200,
     discountPrice: 0,
     calculatedPrice: 21900,
@@ -1620,7 +1620,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0018',
     name: 'Monochrome Overfit Sweatshirt No. 03',
-    category: 'Sweatshirts',
+    category: 'sweatshirts',
     price: 22200,
     discountPrice: 0,
     calculatedPrice: 21900,
@@ -1715,7 +1715,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0019',
     name: 'Monochrome Overfit Sweatshirt No. 04',
-    category: 'Sweatshirts',
+    category: 'sweatshirts',
     price: 22200,
     discountPrice: 0,
     calculatedPrice: 21900,
@@ -1810,7 +1810,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0020',
     name: 'Monochrome Overfit Sweatshirt No. 05',
-    category: 'Sweatshirts',
+    category: 'sweatshirts',
     price: 22200,
     discountPrice: 0,
     calculatedPrice: 21900,
@@ -1905,7 +1905,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0021',
     name: 'Vertical Graphic Basic Hoodie No. 01',
-    category: 'Hoodies',
+    category: 'hoodies',
     price: 26900,
     discountPrice: 0,
     calculatedPrice: 26900,
@@ -2000,7 +2000,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0022',
     name: 'Vertical Graphic Basic Hoodie No. 02',
-    category: 'Hoodies',
+    category: 'hoodies',
     price: 26900,
     discountPrice: 0,
     calculatedPrice: 26900,
@@ -2095,7 +2095,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0023',
     name: 'Vertical Graphic Basic Hoodie No. 03',
-    category: 'Hoodies',
+    category: 'hoodies',
     price: 26900,
     discountPrice: 0,
     calculatedPrice: 26900,
@@ -2190,7 +2190,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0024',
     name: 'Vertical Graphic Basic Hoodie No. 04',
-    category: 'Hoodies',
+    category: 'hoodies',
     price: 26900,
     discountPrice: 0,
     calculatedPrice: 26900,
@@ -2285,7 +2285,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0025',
     name: 'Vertical Graphic Basic Hoodie No. 05',
-    category: 'Hoodies',
+    category: 'hoodies',
     price: 26900,
     discountPrice: 0,
     calculatedPrice: 26900,
@@ -2380,7 +2380,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0026',
     name: 'Street sign Graphic Hoodie No. 01',
-    category: 'Hoodies',
+    category: 'hoodies',
     price: 30900,
     discountPrice: 0,
     calculatedPrice: 30900,
@@ -2475,7 +2475,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0027',
     name: 'Street sign Graphic Hoodie No. 02',
-    category: 'Hoodies',
+    category: 'hoodies',
     price: 30900,
     discountPrice: 0,
     calculatedPrice: 30900,
@@ -2570,7 +2570,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0028',
     name: 'Street sign Graphic Hoodie No. 03',
-    category: 'Hoodies',
+    category: 'hoodies',
     price: 30900,
     discountPrice: 0,
     calculatedPrice: 30900,
@@ -2665,7 +2665,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0029',
     name: 'Street sign Graphic Hoodie No. 04',
-    category: 'Hoodies',
+    category: 'hoodies',
     price: 30900,
     discountPrice: 0,
     calculatedPrice: 30900,
@@ -2760,7 +2760,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0030',
     name: 'Street sign Graphic Hoodie No. 05',
-    category: 'Hoodies',
+    category: 'hoodies',
     price: 30900,
     discountPrice: 0,
     calculatedPrice: 30900,
@@ -2855,7 +2855,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0031',
     name: 'The C:ODE Windbreaker',
-    category: 'Outwear',
+    category: 'outwear',
     price: 25300,
     discountPrice: 0,
     calculatedPrice: 25300,
@@ -2950,7 +2950,7 @@ export const dbData: ProductType[] = [
   {
     id: 'C0032',
     name: 'The C:ODE Varsity Jacket',
-    category: 'Outwear',
+    category: 'outwear',
     price: 53000,
     discountPrice: 0,
     calculatedPrice: 53000,

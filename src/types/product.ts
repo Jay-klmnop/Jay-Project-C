@@ -1,4 +1,10 @@
-import { StaticImageData } from 'next/image';
+import { CategoryFilterType, SizeFilterType, SortOptionType } from '@/constants';
+
+interface ImageInfo {
+  src: string;
+  width: number;
+  height: number;
+}
 
 export interface ProductVariant {
   sku: string;
@@ -6,8 +12,8 @@ export interface ProductVariant {
   size: string;
   stock: number;
   images: {
-    thumbnail: StaticImageData;
-    large: StaticImageData;
+    thumbnail: ImageInfo;
+    large: ImageInfo;
   };
 }
 export interface ProductType {
@@ -23,4 +29,19 @@ export interface ProductType {
     sizes: string[];
   };
   variants: ProductVariant[];
+}
+
+export interface PaginatedResponse<T> {
+  page: number;
+  results: T[];
+  total_pages: number;
+  total_results: number;
+}
+
+export interface ProductFilters {
+  category: CategoryFilterType[];
+  size: SizeFilterType[];
+  color: string[];
+  sort: SortOptionType;
+  query: string;
 }
