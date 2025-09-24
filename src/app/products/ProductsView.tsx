@@ -1,36 +1,52 @@
-'use client';
+'use client'; // ⬅️ 이 컴포넌트가 바로 클라이언트의 시작점
 
-import { type RefObject } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { useMemo, useEffect, Suspense } from 'react';
+import { ProductGrid, useAllProductsQuery } from '@/components/products';
+import type { CategoryFilterType, SizeFilterType, SortOptionType } from '@/constants';
+import { useIntersectionObserver } from '@/hooks';
 import { GridSkeleton } from '@/components/common';
-import { FilterSidebar, ProductGrid } from '@/components/products';
-import { ProductType } from '@/types';
+import { ErrorBoundary } from '@suspensive/react';
 
-interface ProductsViewProps {
-  products: ProductType[];
-  loadMoreRef: RefObject<HTMLDivElement>;
-  isFetchingNextPage: boolean;
-}
+export function ProductsView() {
+  const searchParams = useSearchParams();
 
-export function ProductsView({ products, loadMoreRef, isFetchingNextPage }: ProductsViewProps) {
+  const filters = useMemo(() => {
+    const categories = searchParams.getAll('category') as CategoryFilterType[];
+    const sizes = searchParams.getAll('size') as SizeFilterType[];
+
+    const sort = searchParams.get('sort') as SortOptionType;
+    const query = searchParams.get('q') ?? '';
+
+    return { category: categories, size: sizes, sort, color: [] as string[], query };
+  }, [searchParams]);
+
+  const { data, error, fetchNextPage, hasNextPage, isFetchingNextPage } =
+    useAllProductsQuery(filters);
+
+  const allProducts = useMemo(() => {
+    return data?.pages.flatMap((page) => page.results) ?? [];
+  }, [data]);
+
+  const { ref: loadMoreRef, entry } = useIntersectionObserver({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (entry?.isIntersecting && hasNextPage && !isFetchingNextPage) {
+      fetchNextPage();
+    }
+  }, [entry, fetchNextPage, hasNextPage, isFetchingNextPage]);
+
+  if (error) throw error;
+
   return (
-    <div className='pt-14 font-semibold md:grid md:grid-cols-4 md:gap-8'>
-      <div className='md:col-span-1'>
-        <FilterSidebar />
-      </div>
-      <main className='md:col-span-3'>
-        {products.length > 0 ? (
-          <>
-            <ProductGrid products={products} />
-            <div ref={loadMoreRef} />
-            {isFetchingNextPage && <GridSkeleton />}
-          </>
-        ) : (
-          <div>
-            <h2>No results found.</h2>
-            <p>Try adjusting your search or filters.</p>
-          </div>
-        )}
-      </main>
-    </div>
+    <ErrorBoundary fallback={<div className='m-4 pt-14'>Error loading products</div>}>
+      <Suspense fallback={<GridSkeleton count={12} />}>
+        <ProductGrid products={allProducts} />
+        <div ref={loadMoreRef} />
+        {isFetchingNextPage && <GridSkeleton count={4} />}
+      </Suspense>
+    </ErrorBoundary>
   );
 }

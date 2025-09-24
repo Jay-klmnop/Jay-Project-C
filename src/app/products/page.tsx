@@ -1,54 +1,23 @@
-'use client';
-
-import { GridSkeleton } from '@/components/common';
-import { useAllProductsQuery } from '@/components/products';
-import { useIntersectionObserver } from '@/hooks';
-import { useEffect, useMemo } from 'react';
 import { ProductsView } from './ProductsView';
-import { useSearchParams } from 'next/navigation';
-import type { CategoryFilterType, SizeFilterType, SortOptionType } from '@/constants';
+import { GridSkeleton } from '@/components/common';
+import { FilterSidebar } from '@/components/products';
+import { ErrorBoundary, Suspense } from '@suspensive/react';
 
 export default function ProductsPage() {
-  const searchParams = useSearchParams();
-
-  const filters = useMemo(() => {
-    const categories = searchParams.getAll('category') as CategoryFilterType[];
-    const sizes = searchParams.getAll('size') as SizeFilterType[];
-
-    const sort = searchParams.get('sort') as SortOptionType;
-    const query = searchParams.get('q') ?? '';
-
-    return { category: categories, size: sizes, sort, color: [] as string[], query };
-  }, [searchParams]);
-
-  const { data, error, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
-    useAllProductsQuery(filters);
-
-  const allProducts = useMemo(() => {
-    return data?.pages.flatMap((page) => page.results) ?? [];
-  }, [data]);
-
-  const { ref: loadMoreRef, entry } = useIntersectionObserver({
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if (entry?.isIntersecting && hasNextPage && !isFetchingNextPage) {
-      fetchNextPage();
-    }
-  }, [entry, fetchNextPage, hasNextPage, isFetchingNextPage]);
-
-  if (isLoading) {
-    return <GridSkeleton count={12} />;
-  }
-
-  if (error) return <div className='pt-14'>Error: {error.message}</div>;
-
   return (
-    <ProductsView
-      products={allProducts}
-      loadMoreRef={loadMoreRef}
-      isFetchingNextPage={isFetchingNextPage}
-    />
+    <div className='pt-14 font-semibold md:grid md:grid-cols-4 md:gap-8'>
+      <div className='md:col-span-1'>
+        <ErrorBoundary fallback={<div className='m-4 pt-14'>Error loading filters</div>}>
+          <Suspense fallback={<div>loading filters...</div>}>
+            <FilterSidebar />
+          </Suspense>
+        </ErrorBoundary>
+      </div>
+      <main className='md:col-span-3'>
+        <Suspense fallback={<GridSkeleton count={12} />}>
+          <ProductsView />
+        </Suspense>
+      </main>
+    </div>
   );
 }
