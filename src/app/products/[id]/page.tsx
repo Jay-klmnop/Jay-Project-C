@@ -1,9 +1,14 @@
 import { notFound } from 'next/navigation';
-import { FeaturedProducts, ProductDetailCard } from '@/components/products';
-import { getAllProducts, getProductById } from '@/lib/data';
+import { ProductDetailCard } from '@/components/products';
+import { getProductById } from '@/lib/data';
 
-export default async function ProductDetailPage({ params }: { params: { id: string } }) {
-  const [product, allProducts] = await Promise.all([getProductById(params.id), getAllProducts()]);
+interface ProductDetailPageProps {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
+  const product = await getProductById(params.id);
 
   if (!product) {
     notFound();
@@ -11,8 +16,7 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
 
   return (
     <div className='p-20 text-center'>
-      {product && <ProductDetailCard product={product} />}
-      <FeaturedProducts products={allProducts} />
+      <ProductDetailCard product={product} />
     </div>
   );
 }

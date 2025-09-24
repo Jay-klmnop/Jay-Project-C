@@ -14,9 +14,10 @@ export default function ProductGrid({ products }: ProductGridProps) {
 
   return (
     <div className='mx-4 my-4 grid flex-[3] grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4'>
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      {products.map((product) => {
+        if (!product) return null;
+        return <ProductCard key={product.id} product={product} />;
+      })}
     </div>
   );
 }
