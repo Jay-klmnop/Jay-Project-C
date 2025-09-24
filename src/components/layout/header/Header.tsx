@@ -2,12 +2,16 @@
 
 import { ThemeToggleButton } from '@/components/common';
 import { NavMain, NavSub, UserActions } from '@/components/layout';
-import { toggleCart, useAppDispatch } from '@/RTK';
+import { toggleCart, toggleSearchModal, useAppDispatch } from '@/RTK';
+import {} from '@/RTK/slices/uiSlice';
 import Link from 'next/link';
 import { IoMdMenu } from 'react-icons/io';
 
 export default function Header() {
   const dispatch = useAppDispatch();
+  const handleSearchClick = () => {
+    dispatch(toggleSearchModal());
+  };
   const handleCartClick = () => {
     dispatch(toggleCart());
   };
@@ -20,7 +24,7 @@ export default function Header() {
             <Link href='/' className='text-sm font-black lg:text-base'>
               C:ODE
             </Link>
-            <div>search</div>
+            <button onClick={handleSearchClick}>search</button>
             <ThemeToggleButton />
             <NavMain className='hidden lg:flex' />
           </div>

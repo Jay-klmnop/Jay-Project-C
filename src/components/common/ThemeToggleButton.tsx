@@ -2,46 +2,42 @@
 
 import { THEMES } from '@/constants';
 import { useTheme } from 'next-themes';
+import { ToggleMenu } from './ToggleMenu';
 import { useEffect, useState } from 'react';
 
 export function ThemeToggleButton() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
-  const [isOpen, setIsOpen] = useState(false);
-
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   if (!mounted) return null;
 
   return (
-    <div className='flex flex-row'>
-      <button
-        onClick={() => {
-          setIsOpen((prev) => !prev);
-        }}
-        className='toggle-button'
-        data-state='active'
-        data-open={isOpen}
-      >
-        {theme === 'system' ? `system (${resolvedTheme})` : theme}
-      </button>
-      {isOpen && (
-        <div className='flex p-2'>
-          {THEMES.map((themeName) => (
-            <button
-              key={themeName}
-              onClick={() => {
-                setTheme(themeName);
-                setIsOpen(false);
-              }}
-              data-state={theme === themeName ? 'active' : 'inactive'}
-              className='toggle-button p-2 text-center'
-            >
-              {themeName}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
+    <ToggleMenu
+      className='flex h-full flex-row items-center justify-center'
+      trigger={
+        <button className='p-2 text-center' data-state='active'>
+          {theme}
+        </button>
+      }
+    >
+      <div className='flex p-2'>
+        {THEMES.map((themeName) => (
+          <button
+            key={themeName}
+            onClick={() => {
+              setTheme(themeName);
+            }}
+            data-state={theme === themeName ? 'active' : 'inactive'}
+            className='flex items-center justify-center p-2 text-center'
+          >
+            {themeName}
+          </button>
+        ))}
+      </div>
+    </ToggleMenu>
   );
 }

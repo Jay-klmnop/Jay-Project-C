@@ -1,6 +1,8 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { getProductById } from '@/lib/data';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   try {
     const url = new URL(request.url);
@@ -16,22 +18,12 @@ export async function GET(request: NextRequest) {
     if (!product) {
       return NextResponse.json({ message: 'Product not found.' }, { status: 404 });
     }
-    const baseUrl = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : 'http://localhost:3000';
 
-    const productWithFullImageUrls = {
-      ...product,
-      variants: product.variants.map((variant) => ({
-        ...variant,
-        images: {
-          thumbnail: `${baseUrl}${variant.images.thumbnail.src}`,
-          large: `${baseUrl}${variant.images.large.src}`,
-        },
-      })),
+    const headers = {
+      'Cache-Control': 'no-store, max-age=0',
     };
 
-    return NextResponse.json(productWithFullImageUrls);
+    return NextResponse.json(product, { headers });
   } catch (error) {
     console.error('[API ERROR] /api/products/[id]:', error);
     let errorMessage = 'An unknown error occurred.';

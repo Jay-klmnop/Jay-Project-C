@@ -31,7 +31,7 @@ export default function ProductDetail({ product }: ProductDetailCardProps) {
   return (
     <div className='product-card relative mx-5 my-4 flex min-h-80 min-w-60 p-4 transition-opacity duration-300 ease-in-out lg:flex-row lg:justify-around'>
       <ImageWithPlaceholder
-        src={selectedVariant.images.large}
+        image={selectedVariant.images.large}
         alt={product.name}
         width={selectedVariant.images.large.width}
         height={selectedVariant.images.large.height}
@@ -46,9 +46,7 @@ export default function ProductDetail({ product }: ProductDetailCardProps) {
                 key={color}
                 type='button'
                 onClick={() => setSelectedColor(color)}
-                className={`h-5 w-5 rounded-full border-2 ${
-                  color === 'Black' ? 'bg-black' : 'bg-white'
-                } ${selectedColor === color ? 'border-neutral-400' : 'border-transparent'}`}
+                className={`h-5 w-5 rounded-full ${color === 'Black' ? 'bg-black' : 'bg-white'}`}
               ></button>
             ))}
           </div>

@@ -2,8 +2,7 @@
 
 import type { ProductType } from '@/types';
 import { ImageWithPlaceholder } from '@/components/common';
-import { useEffect, useState } from 'react';
-import type { MouseEvent } from 'react';
+import { useEffect, useState, MouseEvent } from 'react';
 import Link from 'next/link';
 
 interface ProductCardProps {
@@ -25,6 +24,14 @@ export default function ProductCard({ product }: ProductCardProps) {
     });
   }, [product]);
 
+  if (!product?.variants || product.variants.length === 0) {
+    return <div>Invalid product data.</div>;
+  }
+
+  if (!selectedVariant) {
+    return <div>Variant not found.</div>;
+  }
+
   const handleColorChange = (e: MouseEvent, color: string) => {
     e.stopPropagation();
     e.preventDefault();
@@ -35,7 +42,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     <Link href={`/products/${product.id}`}>
       <div className='product-card relative max-h-96 min-h-80 min-w-60 gap-4 p-4 transition-opacity duration-300 ease-in-out'>
         <ImageWithPlaceholder
-          src={selectedVariant.images.thumbnail}
+          image={selectedVariant.images.thumbnail}
           alt={product.name}
           width={selectedVariant.images.thumbnail.width}
           height={selectedVariant.images.thumbnail.height}
@@ -51,9 +58,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               key={color}
               type='button'
               onClick={(e) => handleColorChange(e, color)}
-              className={`h-5 w-5 rounded-full border-2 ${
-                color === 'Black' ? 'bg-black' : 'bg-white'
-              } ${selectedColor === color ? 'border-neutral-500' : 'border-transparent'}`}
+              className={`h-5 w-5 rounded-full ${color === 'Black' ? 'bg-black' : 'bg-white'}`}
             ></button>
           ))}
         </div>

@@ -24,7 +24,7 @@ export const PROMO_ITEMS: Record<string, PromoItemType> = {
     id: 2,
     title: 'New T-shirts Collection',
     description: 'Explore the Forest series',
-    link: '/products/t-shirts',
+    link: '/products/tshirts',
     imageUrl: promoImage3,
   },
   third: {

@@ -16,6 +16,9 @@
 }
 
 @layer components {
+  .centralize {
+    @apply flex items-center justify-center text-center;
+  }
   .product-card {
     background-color: theme(colors.neutral.100);
     color: theme(colors.neutral.900);
@@ -81,13 +84,10 @@
     }
   }
 
-  .overlay-page {
-    background-color: theme(colors.neutral.900);
-  }
-
   .side-bar {
     background-color: theme(colors.white);
     color: theme(colors.black);
+    @apply opacity-95;
 
     @variant dark {
       background-color: theme(colors.black);
@@ -96,14 +96,20 @@
   }
 
   .cart-product-card {
-    background-color: oklch(from theme(colors.neutral.100) l c h / 50%);
+    background-color: theme(colors.neutral.100);
     color: theme(colors.neutral.900);
+
     @variant dark {
-      background-color: oklch(from theme(colors.neutral.900) l c h / 50%);
+      background-color: theme(colors.neutral.900);
       color: theme(colors.white);
     }
 
     @apply rounded-lg shadow-md;
     @apply flex flex-row items-center justify-evenly text-center;
+  }
+
+  .filter-group {
+    @apply flex items-center gap-2;
+    @apply md:flex-col md:items-start;
   }
 }

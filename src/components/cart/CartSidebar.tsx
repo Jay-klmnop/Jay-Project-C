@@ -13,9 +13,9 @@ export function CartSidebar() {
   }
 
   return (
-    <div className='overlay-page fixed inset-0 z-40' onClick={() => dispatch(closeCart())}>
+    <div className='side-bar fixed inset-0 z-40' onClick={() => dispatch(closeCart())}>
       <div
-        className='side-bar fixed top-0 right-0 z-50 h-full w-96 p-8 pt-14 lg:w-xl'
+        className='fixed top-0 right-0 z-50 h-full w-96 p-8 pt-14 lg:w-xl'
         onClick={(e) => e.stopPropagation()}
       >
         <h1 className='sr-only'>Cart</h1>

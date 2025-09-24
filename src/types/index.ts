@@ -1,2 +1,2 @@
 export type { CartItemType } from './cart';
-export type { ProductType, ProductVariant } from './product';
+export type { ProductType, ProductVariant, PaginatedResponse } from './product';
