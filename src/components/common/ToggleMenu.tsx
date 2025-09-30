@@ -1,6 +1,7 @@
 'use client';
 
-import { type ReactNode, useState } from 'react';
+import { useClickOutside } from '@/hooks';
+import { type ReactNode, useRef, useState } from 'react';
 
 interface ToggleMenuProps {
   trigger: ReactNode;
@@ -11,9 +12,11 @@ interface ToggleMenuProps {
 
 export function SideToggleMenu({ trigger, children, className }: ToggleMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const sideToggleRef = useRef<HTMLDivElement>(null);
+  useClickOutside(sideToggleRef, () => setIsOpen(false));
 
   return (
-    <div className='flex h-full items-center'>
+    <div className='flex h-full items-center' ref={sideToggleRef}>
       <div
         onClick={() => {
           setIsOpen((prev) => !prev);
@@ -30,9 +33,11 @@ export function SideToggleMenu({ trigger, children, className }: ToggleMenuProps
 
 export function DropToggleMenu({ trigger, children, className, menuClassName }: ToggleMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const dropToggleRef = useRef<HTMLDivElement>(null);
+  useClickOutside(dropToggleRef, () => setIsOpen(false));
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className}`} ref={dropToggleRef}>
       <div onClick={() => setIsOpen((prev) => !prev)} className='cursor-pointer'>
         {trigger}
       </div>

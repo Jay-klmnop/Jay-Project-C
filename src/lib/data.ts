@@ -25,7 +25,7 @@ export const getPaginatedProducts = async (
 ): Promise<PaginatedResponse<ProductType>> => {
   const {
     page = 1,
-    sort = 'release_asc',
+    sort = 'release_desc',
     categories = [],
     sizes = [],
     colors = [],
@@ -48,15 +48,15 @@ export const getPaginatedProducts = async (
   }
 
   if (categories.length > 0) {
-    filteredData = filteredData.filter((p) => !categories.includes(p.category));
+    filteredData = filteredData.filter((p) => categories.includes(p.category));
   }
 
   if (sizes.length > 0) {
-    filteredData = filteredData.filter((p) => !p.variants.some((v) => sizes.includes(v.size)));
+    filteredData = filteredData.filter((p) => p.variants.some((v) => sizes.includes(v.size)));
   }
 
   if (colors.length > 0) {
-    filteredData = filteredData.filter((p) => !p.variants.some((v) => colors.includes(v.color)));
+    filteredData = filteredData.filter((p) => p.variants.some((v) => colors.includes(v.color)));
   }
 
   const startIndex = (page - 1) * ITEMS_PER_PAGE;

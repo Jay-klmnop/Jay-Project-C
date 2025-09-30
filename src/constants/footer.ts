@@ -1,19 +1,7 @@
-export const ASSISTANCE_ITEMS = [
-  `Find an order`,
-  `Terms of delivery`,
-  `Exchange and return of goods`,
-  `Guarantee`,
-  `Frequently asked questions`,
-  `Terms of use of the site`,
-];
-
-export const SERVICE_ITEMS = [
-  `Bonus program`,
-  `Gift cards`,
-  `Credit and payment`,
-  `Service contracts`,
-  `Non-cash account`,
-  `Payment`,
+export const FOOTER_NAV_LINKS = [
+  { href: '/service', label: 'service' },
+  { href: '/assistance', label: 'assistance' },
+  { href: '/info', label: 'about / contact' },
 ];
 
 export const SOCIAL_LINKS = [

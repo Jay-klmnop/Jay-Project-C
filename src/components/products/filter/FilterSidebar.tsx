@@ -34,12 +34,12 @@ export function FilterSidebar() {
       const currentSizes = params.getAll('size');
 
       const newSizes = currentSizes.includes(size)
-        ? currentSizes.filter((c) => c !== size)
+        ? currentSizes.filter((s) => s !== size)
         : [...currentSizes, size];
 
       params.delete('size');
       if (newSizes.length > 0) {
-        newSizes.forEach((c) => params.append('size', c));
+        newSizes.forEach((s) => params.append('size', s));
       }
       router.replace(`${pathname}?${params.toString()}`, { scroll: false });
     },
