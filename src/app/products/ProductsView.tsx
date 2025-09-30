@@ -1,7 +1,7 @@
-'use client'; // ⬅️ 이 컴포넌트가 바로 클라이언트의 시작점
+'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useMemo, useEffect, Suspense } from 'react';
+import { useMemo, useEffect } from 'react';
 import { ProductGrid, useAllProductsQuery } from '@/components/products';
 import type { CategoryFilterType, SizeFilterType, SortOptionType } from '@/constants';
 import { useIntersectionObserver } from '@/hooks';
@@ -42,11 +42,9 @@ export function ProductsView() {
 
   return (
     <ErrorBoundary fallback={<div className='m-4 pt-14'>Error loading products</div>}>
-      <Suspense fallback={<GridSkeleton count={12} />}>
-        <ProductGrid products={allProducts} />
-        <div ref={loadMoreRef} />
-        {isFetchingNextPage && <GridSkeleton count={4} />}
-      </Suspense>
+      <ProductGrid products={allProducts} />
+      <div ref={loadMoreRef} />
+      {isFetchingNextPage && <GridSkeleton count={4} />}
     </ErrorBoundary>
   );
 }

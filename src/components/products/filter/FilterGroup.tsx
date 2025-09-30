@@ -1,7 +1,8 @@
 import { CATEGORIES, SIZES, SORT_OPTIONS } from '@/constants';
 import type { CategoryFilterType, SizeFilterType, SortOptionType } from '@/constants';
 import { Checkbox } from '@/components/products';
-import { ToggleMenu } from '@/components/common/ToggleMenu';
+import { DropToggleMenu } from '@/components/common';
+import { RiArrowDropDownLine } from 'react-icons/ri';
 
 interface CategoryFilterProps {
   selectedCategories: CategoryFilterType[];
@@ -10,21 +11,28 @@ interface CategoryFilterProps {
 
 export function CategoryFilter({ selectedCategories, onToggleCategory }: CategoryFilterProps) {
   return (
-    <ToggleMenu
-      className='filter-group leading-none'
-      trigger={<div className='w-16 font-semibold md:w-20'>category</div>}
+    <DropToggleMenu
+      className='flex'
+      trigger={
+        <div className='flex w-full items-center justify-between'>
+          <span className='w-20 font-semibold md:flex'>category</span>
+          <RiArrowDropDownLine size={16} />
+        </div>
+      }
     >
-      {Object.entries(CATEGORIES).map(([key, label]) => (
-        <button
-          key={key}
-          onClick={() => onToggleCategory(key as CategoryFilterType)}
-          className='centralize gap-1'
-        >
-          <Checkbox checked={!selectedCategories.includes(key as CategoryFilterType)} />
-          <span>{label}</span>
-        </button>
-      ))}
-    </ToggleMenu>
+      <div className='flex flex-col gap-2'>
+        {Object.entries(CATEGORIES).map(([key, label]) => (
+          <button
+            key={key}
+            className='flex items-center justify-baseline gap-1 text-center'
+            onClick={() => onToggleCategory(key as CategoryFilterType)}
+          >
+            <Checkbox checked={!selectedCategories.includes(key as CategoryFilterType)} />
+            <span>{label}</span>
+          </button>
+        ))}
+      </div>
+    </DropToggleMenu>
   );
 }
 
@@ -35,21 +43,28 @@ interface SizeFilterProps {
 
 export function SizeFilter({ selectedSizes, onToggleSize }: SizeFilterProps) {
   return (
-    <ToggleMenu
-      className='filter-group leading-none'
-      trigger={<div className='w-16 font-semibold md:w-20'>size</div>}
+    <DropToggleMenu
+      className='flex'
+      trigger={
+        <div className='flex w-full items-center justify-between'>
+          <span className='w-20 font-semibold md:flex'>size</span>
+          <RiArrowDropDownLine size={16} />
+        </div>
+      }
     >
-      {Object.entries(SIZES).map(([key, label]) => (
-        <button
-          key={key}
-          className='centralize gap-1'
-          onClick={() => onToggleSize(key as SizeFilterType)}
-        >
-          <Checkbox checked={selectedSizes.includes(key as SizeFilterType)} />
-          <span>{label}</span>
-        </button>
-      ))}
-    </ToggleMenu>
+      <div className='flex flex-col gap-2'>
+        {Object.entries(SIZES).map(([key, label]) => (
+          <button
+            key={key}
+            className='flex items-center justify-baseline gap-1 text-center'
+            onClick={() => onToggleSize(key as SizeFilterType)}
+          >
+            <Checkbox checked={selectedSizes.includes(key as SizeFilterType)} />
+            <span>{label}</span>
+          </button>
+        ))}
+      </div>
+    </DropToggleMenu>
   );
 }
 
@@ -62,20 +77,27 @@ interface SortOptionsProps {
 export function SortOption({ selectedOption, onToggleOption, className }: SortOptionsProps) {
   const currentLabel = SORT_OPTIONS[selectedOption];
   return (
-    <ToggleMenu
-      className='filter-group leading-none'
-      trigger={<div className='w-16 font-semibold md:w-30'>{currentLabel}</div>}
+    <DropToggleMenu
+      className='flex'
+      trigger={
+        <div className='flex w-full items-center justify-between'>
+          <span className='w-28 font-semibold md:w-32'>{currentLabel}</span>
+          <RiArrowDropDownLine size={16} />
+        </div>
+      }
     >
-      {Object.entries(SORT_OPTIONS).map(([key, label]) => (
-        <button
-          key={key}
-          className='centralize gap-1'
-          onClick={() => onToggleOption(key as SortOptionType)}
-        >
-          <Checkbox checked={selectedOption.includes(key as SortOptionType)} />
-          <span className={`${className}`}>{label}</span>
-        </button>
-      ))}
-    </ToggleMenu>
+      <div className='flex flex-col gap-2'>
+        {Object.entries(SORT_OPTIONS).map(([key, label]) => (
+          <button
+            key={key}
+            className='flex items-center justify-baseline gap-1 text-center'
+            onClick={() => onToggleOption(key as SortOptionType)}
+          >
+            <Checkbox checked={selectedOption.includes(key as SortOptionType)} />
+            <span className={`${className}`}>{label}</span>
+          </button>
+        ))}
+      </div>
+    </DropToggleMenu>
   );
 }

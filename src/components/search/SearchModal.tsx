@@ -15,7 +15,7 @@ export function SearchModal() {
   return (
     <div className='fixed inset-0 z-30' onClick={() => dispatch(closeSearchModal())}>
       <div
-        className='side-bar fixed top-0 left-0 w-96 p-4 pt-14 lg:w-xl'
+        className='side-menu fixed top-0 left-0 w-96 p-4 pt-14 lg:w-xl'
         onClick={(e) => e.stopPropagation()}
       >
         <ErrorBoundary fallback={<div className='m-4'>Unexpected error, please reload</div>}>
