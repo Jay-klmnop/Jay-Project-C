@@ -112,4 +112,16 @@
     @apply flex items-center gap-2;
     @apply md:flex-col md:items-start;
   }
+
+  .footer-bg {
+    background-color: theme(colors.neutral.100);
+
+    @variant dark {
+      background-color: theme(colors.neutral.950);
+    }
+  }
+
+  .sub-text {
+    color: theme(colors.neutral.500);
+  }
 }

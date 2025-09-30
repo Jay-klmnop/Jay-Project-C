@@ -27,7 +27,7 @@ export function CategoryFilter({ selectedCategories, onToggleCategory }: Categor
             className='flex items-center justify-baseline gap-1 text-center'
             onClick={() => onToggleCategory(key as CategoryFilterType)}
           >
-            <Checkbox checked={!selectedCategories.includes(key as CategoryFilterType)} />
+            <Checkbox checked={selectedCategories.includes(key as CategoryFilterType)} />
             <span>{label}</span>
           </button>
         ))}
@@ -57,9 +57,9 @@ export function SizeFilter({ selectedSizes, onToggleSize }: SizeFilterProps) {
           <button
             key={key}
             className='flex items-center justify-baseline gap-1 text-center'
-            onClick={() => onToggleSize(key as SizeFilterType)}
+            onClick={() => onToggleSize(label as SizeFilterType)}
           >
-            <Checkbox checked={selectedSizes.includes(key as SizeFilterType)} />
+            <Checkbox checked={selectedSizes.includes(label as SizeFilterType)} />
             <span>{label}</span>
           </button>
         ))}

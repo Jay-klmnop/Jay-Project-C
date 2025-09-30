@@ -2,14 +2,14 @@
 
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { SUB_NAV_ITEMS } from '@/constants';
+import { PRODUCT_NAV_ITEMS } from '@/constants';
 import Link from 'next/link';
 
-interface NavSubProps {
+interface ProductNavProps {
   className?: string;
 }
 
-export default function NavSub({ className }: NavSubProps) {
+export default function ProductNav({ className }: ProductNavProps) {
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
 
@@ -23,7 +23,7 @@ export default function NavSub({ className }: NavSubProps) {
 
   return (
     <nav className={`flex h-6 w-full flex-row items-center justify-around px-4 ${className ?? ''}`}>
-      {SUB_NAV_ITEMS.map(({ href, label }) => (
+      {PRODUCT_NAV_ITEMS.map(({ href, label }) => (
         <Link
           key={href}
           href={href}

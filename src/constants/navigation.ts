@@ -1,15 +1,9 @@
-export const MAIN_NAV_LINKS = [
-  { href: '/', label: 'home' },
-  { href: '/about', label: 'about' },
-  { href: '/contact', label: 'contact' },
-];
-
-export const SUB_NAV_ITEMS = [
+export const PRODUCT_NAV_ITEMS = [
   { href: '/products', label: 'all' },
-  { href: '/tshirts', label: 'tshirts' },
-  { href: '/sweatshirts', label: 'sweatshirts' },
-  { href: '/hoodies', label: 'hoodies' },
-  { href: '/outwear', label: 'outwear' },
+  { href: '/products?category=tshirts', label: 'tshirts' },
+  { href: '/products?category=sweatshirts', label: 'sweatshirts' },
+  { href: '/products?category=hoodies', label: 'hoodies' },
+  { href: '/products?category=outwear', label: 'outwear' },
 ];
 
 export const USER_ACTIONS_LINKS = [

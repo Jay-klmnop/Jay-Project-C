@@ -1,7 +1,7 @@
 'use client';
 
 import { ThemeToggleButton } from '@/components/common';
-import { NavMain, NavSub, UserActions } from '@/components/layout';
+import { ProductNav, UserActions } from '@/components/layout';
 import { toggleCart, toggleSearchModal, useAppDispatch } from '@/RTK';
 import {} from '@/RTK/slices/uiSlice';
 import Link from 'next/link';
@@ -26,11 +26,10 @@ export default function Header() {
             </Link>
             <button onClick={handleSearchClick}>search</button>
             <ThemeToggleButton />
-            <NavMain className='hidden lg:flex' />
           </div>
 
           <div className='flex shrink-0 items-center gap-4'>
-            <NavSub className='hidden lg:flex' />
+            <ProductNav className='hidden lg:flex' />
             <UserActions onCartClick={handleCartClick} className='hidden sm:flex' />
             <button className='lg:hidden'>
               <IoMdMenu size={20} />

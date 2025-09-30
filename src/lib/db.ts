@@ -107,7 +107,7 @@ export const dbData: ProductType[] = [
     tags: ['ocean', 'original-fit', 'graphic-tee'],
     options: {
       colors: ['Black', 'White'],
-      sizes: ['S', 'M', 'L', 'XL'],
+      sizes: ['S', 'M', 'L'],
     },
     variants: [
       {
@@ -141,16 +141,6 @@ export const dbData: ProductType[] = [
         },
       },
       {
-        sku: 'C0002-BL-XL',
-        color: 'Black',
-        size: 'XL',
-        stock: 18,
-        images: {
-          thumbnail: ProductImages.C0002.black.thumb,
-          large: ProductImages.C0002.black.large,
-        },
-      },
-      {
         sku: 'C0002-WH-S',
         color: 'White',
         size: 'S',
@@ -175,16 +165,6 @@ export const dbData: ProductType[] = [
         color: 'White',
         size: 'L',
         stock: 15,
-        images: {
-          thumbnail: ProductImages.C0002.white.thumb,
-          large: ProductImages.C0002.white.large,
-        },
-      },
-      {
-        sku: 'C0002-WH-XL',
-        color: 'White',
-        size: 'XL',
-        stock: 12,
         images: {
           thumbnail: ProductImages.C0002.white.thumb,
           large: ProductImages.C0002.white.large,
@@ -2957,19 +2937,9 @@ export const dbData: ProductType[] = [
     tags: ['autumn', 'baseball', 'jacket'],
     options: {
       colors: ['Black', 'White'],
-      sizes: ['S', 'M', 'L', 'XL'],
+      sizes: ['M', 'L', 'XL'],
     },
     variants: [
-      {
-        sku: 'C0032-BL-S',
-        color: 'Black',
-        size: 'S',
-        stock: 10,
-        images: {
-          thumbnail: ProductImages.C0032.black.thumb,
-          large: ProductImages.C0032.black.large,
-        },
-      },
       {
         sku: 'C0032-BL-M',
         color: 'Black',
@@ -2998,16 +2968,6 @@ export const dbData: ProductType[] = [
         images: {
           thumbnail: ProductImages.C0032.black.thumb,
           large: ProductImages.C0032.black.large,
-        },
-      },
-      {
-        sku: 'C0032-WH-S',
-        color: 'White',
-        size: 'S',
-        stock: 12,
-        images: {
-          thumbnail: ProductImages.C0032.white.thumb,
-          large: ProductImages.C0032.white.large,
         },
       },
       {
