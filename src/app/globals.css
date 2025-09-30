@@ -27,7 +27,7 @@
       color: theme(colors.neutral.200);
     }
 
-    @apply rounded-lg shadow-md;
+    @apply rounded-lg opacity-90 shadow-md;
     @apply flex flex-col items-center justify-center text-center;
   }
 
@@ -84,10 +84,10 @@
     }
   }
 
-  .side-bar {
+  .side-menu {
     background-color: theme(colors.white);
     color: theme(colors.black);
-    @apply opacity-95;
+    @apply opacity-90;
 
     @variant dark {
       background-color: theme(colors.black);

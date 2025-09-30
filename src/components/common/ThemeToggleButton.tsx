@@ -2,7 +2,7 @@
 
 import { THEMES } from '@/constants';
 import { useTheme } from 'next-themes';
-import { ToggleMenu } from './ToggleMenu';
+import { SideToggleMenu } from './ToggleMenu';
 import { useEffect, useState } from 'react';
 
 export function ThemeToggleButton() {
@@ -16,7 +16,7 @@ export function ThemeToggleButton() {
   if (!mounted) return null;
 
   return (
-    <ToggleMenu
+    <SideToggleMenu
       className='flex h-full flex-row items-center justify-center'
       trigger={
         <button className='p-2 text-center' data-state='active'>
@@ -38,6 +38,6 @@ export function ThemeToggleButton() {
           </button>
         ))}
       </div>
-    </ToggleMenu>
+    </SideToggleMenu>
   );
 }

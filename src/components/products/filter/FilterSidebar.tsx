@@ -1,6 +1,6 @@
 'use client';
 
-import { CategoryFilter, SizeFilter, SortOption } from './FilterGroup';
+import { CategoryFilter, SizeFilter, SortOption } from '@/components/products';
 import type { CategoryFilterType, SizeFilterType, SortOptionType } from '@/constants';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { useCallback } from 'react';

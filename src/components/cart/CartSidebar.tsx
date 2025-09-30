@@ -13,7 +13,7 @@ export function CartSidebar() {
   }
 
   return (
-    <div className='side-bar fixed inset-0 z-40' onClick={() => dispatch(closeCart())}>
+    <div className='side-menu fixed inset-0 z-40' onClick={() => dispatch(closeCart())}>
       <div
         className='fixed top-0 right-0 z-50 h-full w-96 p-8 pt-14 lg:w-xl'
         onClick={(e) => e.stopPropagation()}
